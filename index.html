@@ -282,13 +282,13 @@ a{text-decoration:none;color:inherit}
 .btn-dark:hover{background:var(--void-soft);transform:translateY(-1px)}
 
 /* PAGE HERO */
-.page-hero{background:var(--void);padding:160px 8% 80px;position:relative;overflow:hidden;margin-top:100px}
-.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(168,123,69,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(168,123,69,0.035) 1px,transparent 1px);background-size:60px 60px}
-.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(168,123,69,0.4),transparent)}
-.page-hero-inner{position:relative;z-index:1}
-.page-hero-inner h1{font-family:var(--serif);font-weight:300;font-size:clamp(38px,5vw,62px);color:var(--white);line-height:1.08;margin-bottom:18px}
+.page-hero{background:var(--void);padding:0;position:relative;overflow:hidden;margin-top:100px;min-height:480px;display:flex;align-items:center}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(168,123,69,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(168,123,69,0.035) 1px,transparent 1px);background-size:60px 60px;z-index:0}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(168,123,69,0.4),transparent);z-index:3}
+.page-hero-inner{position:relative;z-index:2;width:100%;padding:80px 8%}
+.page-hero-inner h1{font-family:var(--serif);font-weight:300;font-size:clamp(32px,3.8vw,52px);color:var(--white);line-height:1.08;margin-bottom:18px}
 .page-hero-inner h1 em{color:var(--bronze);font-style:italic}
-.page-hero-inner p{font-size:16px;color:rgba(255,255,255,0.42);max-width:480px;line-height:1.8;font-weight:300}
+.page-hero-inner p{font-size:15px;color:rgba(255,255,255,0.42);max-width:480px;line-height:1.8;font-weight:300}
 
 /* WHATSAPP FLOAT */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:9000;display:flex;align-items:center;gap:8px;background:#25d366;color:white;padding:12px 18px;border-radius:50px;font-size:12px;font-weight:500;box-shadow:0 4px 24px rgba(37,211,102,0.3);transition:all 0.3s;text-decoration:none;animation:floatUp 0.6s ease 1.5s both}
