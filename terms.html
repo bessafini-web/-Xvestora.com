@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditions Générales d'Utilisation — Xvestora</title>
+  <meta name="description" content="Conditions dans lesquelles Xvestora fournit ses services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+
+:root{--void:#080B12;--void-mid:#0D1220;--void-soft:#141A2E;--bronze:#A87B45;--bronze-lt:#BF9260;--bronze-pale:rgba(168,123,69,0.10);--white:#FFFFFF;--off-white:#F5F3EE;--stone:#E2DAD0;--text-dark:#2A2420;--text-mid:#5C5550;--serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;--transition:cubic-bezier(0.4,0,0.2,1)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--void);color:var(--white);overflow-x:hidden}
+img{max-width:100%;display:block}
+button{cursor:pointer;font-family:var(--sans);border:none}
+a{text-decoration:none;color:inherit}
+
+/* INTEL STRIP */
+.intel-strip{position:fixed;top:0;left:0;right:0;z-index:1100;height:28px;background:var(--void-mid);border-bottom:1px solid rgba(168,123,69,0.15);overflow:hidden;display:flex;align-items:center}
+.intel-strip-inner{display:flex;gap:0;animation:tickerScroll 50s linear infinite;white-space:nowrap}
+.intel-strip-item{display:inline-flex;align-items:center;gap:8px;padding:0 32px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.35);border-right:1px solid rgba(168,123,69,0.12)}
+.intel-strip-item .val{color:var(--bronze);font-weight:500}
+.intel-strip-item .up{color:#4ade80}
+.intel-strip-item .dot{width:5px;height:5px;border-radius:50%;background:var(--bronze);opacity:0.6;flex-shrink:0}
+@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* NAV */
+.nav{position:fixed;top:28px;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:72px;background:rgba(8,11,18,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(168,123,69,0.15);transition:height 0.3s var(--transition)}
+.nav-brand{display:flex;align-items:center;gap:16px}
+.nav-logo-mark{width:36px;height:36px;border:1px solid rgba(168,123,69,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;background:var(--bronze-pale);flex-shrink:0}
+.nav-logo-mark svg{width:18px;height:18px;stroke:var(--bronze);fill:none;stroke-width:1.5}
+.nav-brand-col{display:flex;flex-direction:column;gap:2px}
+.nav-brand-name{font-family:var(--serif);font-size:20px;font-weight:600;letter-spacing:5px;color:var(--white);text-transform:uppercase}
+.nav-brand-name em{color:var(--bronze);font-style:normal}
+.nav-brand-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(168,123,69,0.6);font-weight:400}
+.nav-menu{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-menu a{font-size:11px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:color 0.2s}
+.nav-menu a:hover{color:var(--bronze)}
+.nav-cta{background:transparent !important;border:1px solid rgba(168,123,69,0.5) !important;color:var(--bronze) !important;padding:9px 22px;border-radius:1px;font-weight:500 !important;transition:all 0.25s !important}
+.nav-cta:hover{background:var(--bronze) !important;color:var(--void) !important;border-color:var(--bronze) !important}
+.nav-ham{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
+.nav-ham span{width:22px;height:1px;background:rgba(255,255,255,0.6);display:block;transition:all 0.3s}
+
+/* PAGE SYSTEM */
+.page{display:none}.page.active{display:block}
+
+/* HERO */
+#hero-v2{position:relative;height:100vh;min-height:760px;display:flex;align-items:center;overflow:hidden;margin-top:100px}
+.hero-video-wrap{position:absolute;inset:0;z-index:0}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s cubic-bezier(0.4,0,0.2,1),transform 8s cubic-bezier(0.25,0.46,0.45,0.94);transform:scale(1.06)}
+.hero-slide.active{opacity:1;transform:scale(1)}
+.hero-overlay-v2{position:absolute;inset:0;z-index:1;background:linear-gradient(108deg,rgba(8,11,18,0.96) 0%,rgba(8,11,18,0.82) 42%,rgba(8,11,18,0.45) 100%),linear-gradient(to top,rgba(8,11,18,0.88) 0%,transparent 55%)}
+.hero-grain{position:absolute;inset:0;z-index:2;opacity:0.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px}
+.hero-grid{position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(168,123,69,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(168,123,69,0.04) 1px,transparent 1px);background-size:72px 72px}
+.hero-progress-bar{position:absolute;bottom:0;left:0;right:0;z-index:10;height:2px;background:rgba(168,123,69,0.15)}
+.hero-progress-fill{height:100%;width:0%;background:var(--bronze);transition:width 0.1s linear}
+.hero-content-v2{position:relative;z-index:3;padding:0 8%;max-width:680px}
+.hero-badge-v2{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(168,123,69,0.18);background:rgba(168,123,69,0.04);color:rgba(255,255,255,0.35);font-size:8px;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;margin-bottom:22px;backdrop-filter:blur(8px);white-space:nowrap}
+.hero-badge-dot{width:4px;height:4px;border-radius:50%;background:rgba(168,123,69,0.6);flex-shrink:0;animation:blink 2.4s infinite}
+.hero-badge-sep{opacity:0.3}
+.hero-h1-v2{font-family:var(--serif);font-size:clamp(32px,3.8vw,58px);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:24px;letter-spacing:-0.3px}
+.hero-h1-v2 em{color:var(--bronze);font-style:italic;font-weight:400}
+.hero-sub-v2{font-size:clamp(13px,1.1vw,15px);color:rgba(255,255,255,0.52);line-height:1.9;font-weight:300;max-width:560px;margin-bottom:48px;border-left:2px solid rgba(168,123,69,0.28);padding-left:20px}
+.hero-cta-v2{margin-bottom:52px}
+.btn-cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--bronze);color:var(--void);padding:14px 32px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;border:none;border-radius:1px;transition:all 0.25s var(--transition);cursor:pointer}
+.btn-cta-primary:hover{background:var(--bronze-lt);transform:translateY(-2px);box-shadow:0 14px 36px rgba(168,123,69,0.32)}
+.hero-cta-note{margin-top:12px;font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.22);font-weight:300}
+.hero-trust-inline{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hti-item{display:flex;align-items:center;gap:7px;font-size:11px;color:rgba(255,255,255,0.38);letter-spacing:0.5px;font-weight:300}
+.hti-item svg{stroke:var(--bronze);flex-shrink:0}
+.hti-sep{width:1px;height:14px;background:rgba(168,123,69,0.2)}
+.hero-slide-label{position:absolute;bottom:18px;left:8%;z-index:5;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.22)}
+.scroll-cue{position:absolute;right:5%;top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;writing-mode:vertical-rl;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.18)}
+.scroll-cue::after{content:'';width:1px;height:56px;background:linear-gradient(to bottom,var(--bronze),transparent);animation:lineDown 2.4s ease-in-out infinite}
+@keyframes lineDown{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.15}}
+
+/* TRUST */
+.trust-section{background:var(--void-mid);position:relative}
+.trust-rule{height:1px;background:linear-gradient(to right,transparent,rgba(168,123,69,0.35),transparent)}
+.trust-metrics{display:flex;align-items:stretch;border-bottom:1px solid rgba(255,255,255,0.04)}
+.trust-metric{flex:1;padding:48px 5%}
+.trust-metric-sep{width:1px;background:rgba(255,255,255,0.05);flex-shrink:0;margin:32px 0}
+.tm-number{font-family:var(--serif);font-size:clamp(48px,5vw,72px);font-weight:300;line-height:1;color:var(--bronze);display:inline}
+.tm-unit{font-family:var(--serif);font-size:clamp(22px,2.5vw,34px);font-weight:300;color:rgba(168,123,69,0.55);display:inline;margin-left:3px}
+.tm-label{font-size:13px;font-weight:500;color:var(--white);margin-top:10px;margin-bottom:5px}
+.tm-sub{font-size:11px;color:rgba(255,255,255,0.3);font-weight:300;line-height:1.5}
+.trust-statement{padding:64px 8%}
+.trust-statement-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:72px;align-items:start}
+.ts-tag{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--bronze);display:block;margin-bottom:18px}
+.ts-headline{font-family:var(--serif);font-size:clamp(20px,2.2vw,28px);font-weight:300;line-height:1.55;color:rgba(255,255,255,0.75);font-style:italic}
+.ts-pillar{display:flex;gap:18px;align-items:flex-start;padding:22px 0;border-bottom:1px solid rgba(168,123,69,0.08);transition:padding-left 0.3s}
+.ts-pillar:first-child{border-top:1px solid rgba(168,123,69,0.08)}
+.ts-pillar:hover{padding-left:8px}
+.ts-pillar-icon{width:36px;height:36px;flex-shrink:0;background:rgba(168,123,69,0.08);border:1px solid rgba(168,123,69,0.18);border-radius:1px;display:flex;align-items:center;justify-content:center}
+.ts-pillar-icon svg{width:16px;height:16px;stroke:var(--bronze)}
+.ts-pillar-title{font-size:14px;font-weight:500;color:var(--white);margin-bottom:4px}
+.ts-pillar-body{font-size:12px;color:rgba(255,255,255,0.38);line-height:1.7;font-weight:300}
+
+/* SECTIONS */
+.section{padding:100px 8%}
+.section-dark{background:var(--void-mid)}
+.section-void{background:var(--void)}
+.section-light{background:var(--off-white);color:var(--text-dark)}
+.section-tag{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--bronze);margin-bottom:16px;display:block}
+.section-h2{font-family:var(--serif);font-size:clamp(30px,3.8vw,50px);font-weight:300;line-height:1.12;margin-bottom:14px}
+.section-h2 em{color:var(--bronze);font-style:italic}
+.section-light .section-h2{color:var(--text-dark)}
+.gold-rule{width:40px;height:1px;background:var(--bronze);margin:20px 0 44px}
+
+/* TAGLINE */
+.tagline-band{background:var(--void-mid);border-top:1px solid rgba(168,123,69,0.1);border-bottom:1px solid rgba(168,123,69,0.1);padding:28px 8%;text-align:center}
+.tagline-band p{font-family:var(--serif);font-size:20px;font-weight:300;color:rgba(255,255,255,0.4);font-style:italic;letter-spacing:1px}
+.tagline-band p em{color:var(--bronze);font-style:italic}
+
+/* MARKET BAND */
+.market-band{background:var(--void-soft);border-top:1px solid rgba(168,123,69,0.12);border-bottom:1px solid rgba(168,123,69,0.12);padding:0 8%;display:grid;grid-template-columns:repeat(4,1fr)}
+.market-band-item{padding:32px 0;border-right:1px solid rgba(255,255,255,0.05);padding-right:32px}
+.market-band-item:last-child{border-right:none}
+.mbi-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:8px}
+.mbi-val{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--white);line-height:1;margin-bottom:5px}
+.mbi-val em{color:var(--bronze);font-style:normal}
+.mbi-sub{font-size:11px;color:rgba(255,255,255,0.3);font-weight:300}
+
+/* SECTORS */
+.sectors-intro{padding:72px 8% 40px;background:var(--void-mid)}
+.sectors-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;grid-template-rows:500px;gap:2px}
+.sector-card{position:relative;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end}
+.sector-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 0.8s var(--transition);filter:brightness(0.45) saturate(0.8)}
+.sector-card:hover .sector-bg{transform:scale(1.06);filter:brightness(0.6) saturate(1)}
+.sector-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,11,18,0.97) 0%,rgba(8,11,18,0.25) 60%,transparent 100%)}
+.sector-weight{position:absolute;top:18px;right:18px;z-index:2;font-family:var(--serif);font-size:56px;font-weight:300;color:rgba(255,255,255,0.05);line-height:1}
+.sector-card:first-child .sector-weight{font-size:88px}
+.sector-pct{position:absolute;top:20px;left:20px;z-index:2;display:flex;flex-direction:column;gap:3px}
+.sector-pct-bar{width:32px;height:2px;background:rgba(168,123,69,0.3);border-radius:1px;overflow:hidden}
+.sector-pct-fill{height:100%;background:var(--bronze);animation:barFill 1.5s var(--transition) forwards;transform-origin:left;transform:scaleX(0)}
+@keyframes barFill{to{transform:scaleX(1)}}
+.sector-card:hover .sector-pct-fill{animation-duration:0.8s}
+.sector-pct-label{font-size:10px;letter-spacing:1px;color:var(--bronze);font-weight:500}
+.sector-content{position:relative;z-index:1;padding:28px 24px}
+.sector-tag{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--bronze);margin-bottom:8px;display:block}
+.sector-title{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--white);margin-bottom:8px;line-height:1.2}
+.sector-card:first-child .sector-title{font-size:30px}
+.sector-desc{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.65;font-weight:300;max-height:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s;opacity:0}
+.sector-card:hover .sector-desc{max-height:100px;opacity:1}
+.sector-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);font-weight:500;opacity:0;transform:translateY(6px);transition:opacity 0.3s,transform 0.3s}
+.sector-card:hover .sector-link{opacity:1;transform:translateY(0)}
+
+/* WHY */
+.why-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.why-pillars{display:flex;flex-direction:column}
+.why-pillar{padding:26px 0;border-bottom:1px solid rgba(168,123,69,0.10);display:flex;gap:20px;align-items:flex-start;transition:padding-left 0.3s;cursor:default}
+.why-pillar:first-child{border-top:1px solid rgba(168,123,69,0.10)}
+.why-pillar:hover{padding-left:10px}
+.why-pillar-num{font-family:var(--serif);font-size:12px;color:var(--bronze);font-weight:500;min-width:26px;padding-top:3px;letter-spacing:1px}
+.why-pillar h4{font-size:15px;font-weight:500;color:var(--white);margin-bottom:5px}
+.why-pillar p{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;font-weight:300}
+.why-visual{position:relative}
+.why-img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:1px;background:url("https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=900&q=80") center/cover}
+.why-badge{position:absolute;bottom:-24px;left:-24px;background:var(--bronze);color:var(--void);padding:22px 26px;border-radius:1px}
+.why-badge-num{font-family:var(--serif);font-size:38px;font-weight:600;line-height:1}
+.why-badge-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-top:4px;opacity:0.8}
+
+/* PROCESS */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:60px}
+.process-steps::before{content:'';position:absolute;top:21px;left:12%;right:12%;height:1px;background:linear-gradient(to right,transparent,var(--bronze),rgba(168,123,69,0.2),transparent)}
+.process-step{padding:0 20px;text-align:center}
+.process-num{width:42px;height:42px;border-radius:50%;border:1px solid rgba(168,123,69,0.4);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:15px;color:var(--bronze);margin:0 auto 22px;background:var(--void);position:relative;z-index:1;transition:all 0.3s}
+.section-light .process-num{background:var(--off-white)}
+.process-step:hover .process-num{background:var(--bronze);color:var(--void);border-color:var(--bronze)}
+.process-step h4{font-size:14px;font-weight:500;color:var(--white);margin-bottom:10px}
+.section-light .process-step h4{color:var(--text-dark)}
+.process-step p{font-size:12px;color:rgba(255,255,255,0.38);line-height:1.7;font-weight:300}
+.section-light .process-step p{color:var(--text-mid)}
+
+/* PROCESS v2 */
+.process-v2{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:56px}
+.pv2-step{background:var(--void-soft);padding:40px 28px;position:relative;transition:background 0.3s}
+.pv2-step:hover{background:#141C30}
+.pv2-step::after{content:'';position:absolute;top:50px;right:-1px;width:1px;height:32px;background:rgba(168,123,69,0.25)}
+.pv2-step:last-child::after{display:none}
+.pv2-num{font-family:var(--serif);font-size:52px;font-weight:300;line-height:1;color:rgba(168,123,69,0.12);margin-bottom:20px}
+.pv2-icon{width:40px;height:40px;margin-bottom:18px;background:var(--bronze-pale);border:1px solid rgba(168,123,69,0.2);border-radius:1px;display:flex;align-items:center;justify-content:center}
+.pv2-icon svg{width:18px;height:18px;stroke:var(--bronze);fill:none;stroke-width:1.5}
+.pv2-title{font-size:14px;font-weight:500;color:var(--white);margin-bottom:8px}
+.pv2-body{font-size:12px;color:rgba(255,255,255,0.38);line-height:1.75;font-weight:300}
+
+/* SERVICES v2 */
+.services-v2{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:52px}
+.svc-v2{background:var(--void-soft);padding:40px 32px;position:relative;overflow:hidden;transition:background 0.3s,border-color 0.3s;border-top:1px solid rgba(168,123,69,0.0)}
+.svc-v2:hover{background:#141C30;border-top-color:var(--bronze)}
+.svc-v2-icon{width:44px;height:44px;margin-bottom:20px;background:var(--bronze-pale);border:1px solid rgba(168,123,69,0.2);border-radius:1px;display:flex;align-items:center;justify-content:center}
+.svc-v2-icon svg{width:20px;height:20px;stroke:var(--bronze);fill:none;stroke-width:1.5}
+.svc-v2-num{position:absolute;top:24px;right:24px;font-family:var(--serif);font-size:48px;font-weight:300;color:rgba(168,123,69,0.07);line-height:1}
+.svc-v2 h4{font-size:16px;font-weight:500;color:var(--white);margin-bottom:10px}
+.svc-v2 p{font-size:12px;color:rgba(255,255,255,0.40);line-height:1.8;font-weight:300}
+.svc-v2-tag{display:inline-block;margin-top:16px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(168,123,69,0.5)}
+
+/* ABOUT STATS */
+.about-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:52px 0}
+.about-stat{background:var(--void-soft);padding:36px 28px;border-left:2px solid rgba(168,123,69,0.15);transition:border-color 0.3s}
+.about-stat:hover{border-color:var(--bronze)}
+.about-stat-num{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--bronze);line-height:1;margin-bottom:8px}
+.about-stat-label{font-size:13px;font-weight:500;color:var(--white);margin-bottom:4px}
+.about-stat-sub{font-size:11px;color:rgba(255,255,255,0.3);font-weight:300}
+
+/* ADVISORY GRID */
+.advisory-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:52px}
+.adv-card{position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end}
+.adv-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.4) saturate(0.7);transition:transform 0.8s var(--transition),filter 0.4s}
+.adv-card:hover .adv-bg{transform:scale(1.04);filter:brightness(0.55) saturate(1)}
+.adv-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,11,18,0.96) 0%,rgba(8,11,18,0.3) 60%,transparent 100%)}
+.adv-content{position:relative;z-index:2;padding:32px 28px;display:flex;gap:18px;align-items:flex-start}
+.adv-icon{width:40px;height:40px;flex-shrink:0;background:rgba(168,123,69,0.15);border:1px solid rgba(168,123,69,0.3);border-radius:1px;display:flex;align-items:center;justify-content:center;margin-top:3px}
+.adv-icon svg{width:18px;height:18px;stroke:var(--bronze);fill:none;stroke-width:1.5}
+.adv-title{font-size:16px;font-weight:500;color:var(--white);margin-bottom:6px;font-family:var(--serif)}
+.adv-body{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300}
+
+/* MOROCCO FOCUS */
+.morocco-band{background:var(--void-soft);padding:72px 8%;border-top:1px solid rgba(168,123,69,0.1);border-bottom:1px solid rgba(168,123,69,0.1)}
+.morocco-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:center}
+.morocco-left h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:300;color:var(--white);line-height:1.15;margin-bottom:14px}
+.morocco-left h2 em{color:var(--bronze);font-style:italic}
+.morocco-left p{font-size:14px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.8}
+.morocco-regions{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.morocco-region{padding:24px 20px;background:rgba(255,255,255,0.03);border-top:1px solid rgba(168,123,69,0.12);transition:background 0.3s}
+.morocco-region:hover{background:rgba(168,123,69,0.05)}
+.mr-name{font-size:13px;font-weight:500;color:var(--white);margin-bottom:5px}
+.mr-focus{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--bronze);margin-bottom:6px}
+.mr-desc{font-size:11px;color:rgba(255,255,255,0.32);font-weight:300;line-height:1.6}
+
+/* INVESTOR PROFILES */
+.investor-band{background:var(--void);padding:80px 8%}
+.investor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px}
+.inv-profile{padding:36px 28px;background:var(--void-soft);border-bottom:2px solid transparent;transition:border-color 0.3s,background 0.3s}
+.inv-profile:hover{border-color:var(--bronze);background:#141C30}
+.inv-profile-flag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:12px;display:block}
+.inv-profile h4{font-size:16px;font-weight:500;color:var(--white);margin-bottom:8px}
+.inv-profile p{font-size:12px;color:rgba(255,255,255,0.38);line-height:1.75;font-weight:300}
+
+/* CONTACT */
+.contact-split{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:start}
+.contact-detail{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.contact-ico{width:40px;height:40px;flex-shrink:0;background:var(--bronze-pale);border:1px solid rgba(168,123,69,0.2);border-radius:1px;display:flex;align-items:center;justify-content:center}
+.contact-ico svg{width:16px;height:16px;stroke:var(--bronze);fill:none;stroke-width:1.5}
+.contact-detail h5{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:4px}
+.contact-detail p{font-size:15px;color:var(--white)}
+.contact-wa-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.3);color:#25d366;padding:13px 22px;border-radius:1px;font-size:11px;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;margin-top:22px;transition:background 0.25s}
+.contact-wa-btn:hover{background:rgba(37,211,102,0.18)}
+.contact-wa-btn svg{width:16px;height:16px;fill:#25d366}
+.map-embed{margin-top:28px;border-radius:1px;overflow:hidden;height:200px;border:1px solid rgba(168,123,69,0.12)}
+.map-embed iframe{width:100%;height:100%;border:none;filter:grayscale(40%) contrast(1.05) brightness(0.85)}
+
+/* FORM */
+.form-card{background:var(--void-soft);padding:40px 36px;border:1px solid rgba(168,123,69,0.10);border-radius:1px}
+.form-card h3{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--white);margin-bottom:6px}
+.form-card .sub{font-size:13px;color:rgba(255,255,255,0.32);font-weight:300;margin-bottom:28px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.frow.full{grid-template-columns:1fr}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);font-weight:500}
+.field input,.field select,.field textarea{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:var(--white);font-family:var(--sans);font-size:13px;padding:12px 14px;border-radius:1px;outline:none;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,0.18)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(168,123,69,0.5);background:rgba(168,123,69,0.04)}
+.field select option{background:var(--void-soft);color:var(--white)}
+.field textarea{resize:vertical;min-height:110px}
+.form-submit{width:100%;padding:15px;margin-top:8px;background:var(--bronze);color:var(--void);font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;border:none;border-radius:1px;transition:all 0.2s}
+.form-submit:hover{background:var(--bronze-lt);transform:translateY(-1px)}
+.form-note{font-size:10px;color:rgba(255,255,255,0.2);text-align:center;margin-top:10px;font-style:italic}
+
+/* QUOTE BAR */
+.quote-bar{border-left:2px solid var(--bronze);padding:20px 28px;font-family:var(--serif);font-size:18px;font-weight:300;color:rgba(255,255,255,0.65);font-style:italic;background:rgba(168,123,69,0.04);margin-top:44px}
+
+/* CTA BAND */
+.cta-band{background:var(--bronze);padding:60px 8%;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-band h2{font-family:var(--serif);font-size:clamp(22px,3vw,36px);color:var(--void);font-weight:500;line-height:1.2}
+.cta-band p{font-size:14px;color:rgba(8,11,18,0.55);font-weight:300;margin-top:6px}
+.btn-dark{display:inline-flex;align-items:center;gap:10px;background:var(--void);color:var(--white);padding:15px 34px;border:none;border-radius:1px;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;white-space:nowrap;transition:all 0.25s;flex-shrink:0}
+.btn-dark:hover{background:var(--void-soft);transform:translateY(-1px)}
+
+/* PAGE HERO */
+.page-hero{background:var(--void);padding:0;position:relative;overflow:hidden;margin-top:100px;min-height:480px;display:flex;align-items:center}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(168,123,69,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(168,123,69,0.035) 1px,transparent 1px);background-size:60px 60px;z-index:0}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(168,123,69,0.4),transparent);z-index:3}
+.page-hero-inner{position:relative;z-index:2;width:100%;padding:80px 8%}
+.page-hero-inner h1{font-family:var(--serif);font-weight:300;font-size:clamp(32px,3.8vw,52px);color:var(--white);line-height:1.08;margin-bottom:18px}
+.page-hero-inner h1 em{color:var(--bronze);font-style:italic}
+.page-hero-inner p{font-size:15px;color:rgba(255,255,255,0.42);max-width:480px;line-height:1.8;font-weight:300}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:9000;display:flex;align-items:center;gap:8px;background:#25d366;color:white;padding:12px 18px;border-radius:50px;font-size:12px;font-weight:500;box-shadow:0 4px 24px rgba(37,211,102,0.3);transition:all 0.3s;text-decoration:none;animation:floatUp 0.6s ease 1.5s both}
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(37,211,102,0.4)}
+.wa-float svg{width:18px;height:18px;fill:white}
+@keyframes floatUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* FOOTER */
+.footer{background:#050709;border-top:1px solid rgba(168,123,69,0.12);padding:60px 8% 28px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.footer-brand-name{font-family:var(--serif);font-size:18px;font-weight:600;letter-spacing:5px;color:var(--white);text-transform:uppercase;margin-bottom:8px}
+.footer-brand-name em{color:var(--bronze);font-style:normal}
+.footer-brand-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(168,123,69,0.5);margin-bottom:14px}
+.footer-brand p{font-size:12px;color:rgba(255,255,255,0.25);line-height:1.75;font-weight:300;max-width:200px}
+.footer-col h5{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--bronze);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col a{font-size:12px;color:rgba(255,255,255,0.3);transition:color 0.2s}
+.footer-col a:hover{color:var(--bronze)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.04);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.14)}
+.footer-right{font-size:11px;color:rgba(255,255,255,0.2)}
+.footer-right a{color:rgba(168,123,69,0.45)}
+.footer-right a:hover{color:var(--bronze)}
+.footer-legal{margin-top:16px;display:flex;gap:20px;flex-wrap:wrap}
+.footer-legal a{font-size:11px;color:rgba(255,255,255,0.2);transition:color 0.2s}
+.footer-legal a:hover{color:var(--bronze)}
+
+/* LEGAL */
+.legal-content{max-width:760px;margin:0 auto;padding:0 0 60px}
+.legal-content h2{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--white);margin:40px 0 14px}
+.legal-content h2:first-child{margin-top:0}
+.legal-content p{font-size:14px;color:rgba(255,255,255,0.42);line-height:1.9;font-weight:300;margin-bottom:14px}
+.legal-content ul{margin:10px 0 18px 18px;font-size:14px;color:rgba(255,255,255,0.38);line-height:1.9;font-weight:300}
+.legal-content a{color:var(--bronze)}
+.legal-rule{height:1px;background:rgba(168,123,69,0.15);margin:32px 0}
+
+/* MOBILE */
+@media(max-width:900px){
+  .sectors-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .sector-card{min-height:260px}
+  .sector-card:first-child{grid-column:span 2}
+  .why-layout{grid-template-columns:1fr}
+  .why-visual{display:none}
+  .process-steps{grid-template-columns:1fr 1fr;gap:28px}
+  .process-steps::before{display:none}
+  .contact-split{grid-template-columns:1fr;gap:40px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .trust-statement-inner{grid-template-columns:1fr;gap:40px}
+  .market-band{grid-template-columns:1fr 1fr}
+  .process-v2{grid-template-columns:1fr 1fr}
+  .services-v2{grid-template-columns:1fr 1fr}
+  .advisory-grid{grid-template-columns:1fr}
+  .morocco-grid{grid-template-columns:1fr;gap:40px}
+  .morocco-regions{grid-template-columns:1fr 1fr}
+  .investor-grid{grid-template-columns:1fr}
+  .about-stat-row{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .nav-menu{display:none}
+  .nav-ham{display:flex}
+  .intel-strip{display:none}
+  .nav{top:0}
+  #hero-v2{margin-top:72px}
+  .page-hero{margin-top:72px;padding:130px 6% 56px}
+  .sectors-grid{grid-template-columns:1fr}
+  .sector-card:first-child{grid-column:span 1}
+  .process-steps{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .cta-band{flex-direction:column;text-align:center}
+  .footer-top{grid-template-columns:1fr}
+  .section{padding:64px 6%}
+  .wa-float span{display:none}
+  .wa-float{padding:13px;border-radius:50%}
+  .scroll-cue{display:none}
+  .tagline-band p{font-size:16px}
+  .trust-metrics{flex-direction:column}
+  .trust-metric-sep{display:none}
+  .trust-metric{padding:32px 6%;border-bottom:1px solid rgba(255,255,255,0.04)}
+  .trust-statement{padding:44px 6%}
+  .hti-sep{display:none}
+  .market-band{grid-template-columns:1fr}
+  .market-band-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.04);padding:24px 0}
+  .process-v2{grid-template-columns:1fr}
+  .services-v2{grid-template-columns:1fr}
+  .morocco-regions{grid-template-columns:1fr}
+  .about-stat-row{grid-template-columns:1fr}
+  .hero-badge-v2{display:none}
+  .hero-h1-v2{font-size:clamp(28px,8vw,40px)}
+  .hero-sub-v2{font-size:13px}
+}
+
+  /* Page-specific overrides */
+  body { overflow-x: hidden; }
+  .standalone-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(8,11,18,0.95);
+    border-bottom: 1px solid rgba(168,123,69,0.15);
+    backdrop-filter: blur(12px);
+  }
+  .standalone-nav .nav-brand { font-family: var(--serif); font-size: 22px; color: var(--white); letter-spacing: 0.1em; text-decoration: none; }
+  .standalone-nav .nav-brand em { color: var(--bronze); font-style: italic; }
+  .standalone-nav .nav-back {
+    font-family: var(--sans); font-size: 13px; color: rgba(255,255,255,0.5);
+    text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color 0.2s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .standalone-nav .nav-back:hover { color: var(--bronze-lt); }
+  .standalone-nav .nav-back::before { content: '←'; font-size: 16px; }
+  .page-wrap { padding-top: 80px; min-height: 100vh; background: var(--void); }
+  </style>
+</head>
+<body>
+  <nav class="standalone-nav">
+    <a href="/" class="nav-brand">X<em>VEST</em>ORA</a>
+    <a href="/" class="nav-back">Retour au site</a>
+  </nav>
+  <div class="page-wrap">
+    <div class="page-hero"><div class="page-hero-inner"><span class="section-tag">Légal</span><h1>Conditions<br><em>Générales d'Utilisation</em></h1><p>Les conditions dans lesquelles Xvestora fournit ses services consultatifs fonciers au Maroc.</p></div></div>
+    
+  <div class="section section-void"><div class="legal-content">
+    <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-bottom:32px;">Dernière mise à jour : Janvier 2025 · Xvestora · Tanger, Maroc · contact@xvestora.ma</p>
+
+    <h2>1. Objet</h2>
+    <p>Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation du site xvestora.ma ainsi que les services consultatifs fonciers fournis par Xvestora, réseau fondé par Ibrahim Essafini et Aaz El Arab, domicilié à Tanger, Maroc.</p>
+    <div class="legal-rule"></div>
+
+    <h2>2. Nature des Services</h2>
+    <p>Xvestora est un <strong style="color:var(--bronze-lt);">réseau consultatif professionnel</strong> spécialisé dans l'investissement foncier au Maroc. Nos services comprennent :</p>
+    <ul style="margin:16px 0 16px 24px;color:rgba(255,255,255,0.7);line-height:2;">
+      <li>Sourcing d'opportunités foncières hors marché</li>
+      <li>Qualification et analyse de terrains (résidentiel, industriel, agricole, touristique)</li>
+      <li>Mise en relation avec des propriétaires et développeurs</li>
+      <li>Accompagnement dans la due diligence foncière</li>
+      <li>Coordination avec notaires et experts juridiques marocains agréés</li>
+      <li>Conseil sur le cadre réglementaire et fiscal marocain</li>
+    </ul>
+    <p>Xvestora n'est pas un agent immobilier agréé au sens de la réglementation marocaine. Les actes notariaux et transactions sont réalisés par des professionnels légalement habilités.</p>
+    <div class="legal-rule"></div>
+
+    <h2>3. Accès au Site</h2>
+    <p>L'accès au site xvestora.ma est gratuit et ouvert à tout utilisateur disposant d'un accès internet. Xvestora se réserve le droit de modifier, suspendre ou interrompre l'accès au site à tout moment, sans préavis ni responsabilité.</p>
+    <div class="legal-rule"></div>
+
+    <h2>4. Soumission d'un Brief</h2>
+    <p>La soumission d'un brief d'investissement via le formulaire de contact :</p>
+    <ul style="margin:16px 0 16px 24px;color:rgba(255,255,255,0.7);line-height:2;">
+      <li>N'engage pas Xvestora à identifier une opportunité correspondante</li>
+      <li>Ne constitue pas un mandat exclusif de recherche</li>
+      <li>Ne garantit aucun délai de réponse ou disponibilité d'actifs</li>
+      <li>Déclenche une qualification préliminaire gratuite de votre profil</li>
+    </ul>
+    <p>Toute collaboration formelle fait l'objet d'un accord écrit séparé.</p>
+    <div class="legal-rule"></div>
+
+    <h2>5. Honoraires & Rémunération</h2>
+    <p>Le modèle économique de Xvestora repose sur :</p>
+    <ul style="margin:16px 0 16px 24px;color:rgba(255,255,255,0.7);line-height:2;">
+      <li><strong style="color:var(--bronze-lt);">Succès fee</strong> — honoraires convenus par écrit, dus uniquement en cas de transaction aboutie</li>
+      <li><strong style="color:var(--bronze-lt);">Sourcing préliminaire</strong> — fourni sans frais lors de la phase d'évaluation</li>
+      <li><strong style="color:var(--bronze-lt);">Retainer optionnel</strong> — pour missions exclusives ou complexes, sur accord préalable</li>
+    </ul>
+    <p>Aucun frais n'est exigible sans accord écrit signé par les deux parties.</p>
+    <div class="legal-rule"></div>
+
+    <h2>6. Responsabilité & Limitations</h2>
+    <p>Xvestora s'engage à fournir ses services avec professionnalisme et diligence. Cependant :</p>
+    <ul style="margin:16px 0 16px 24px;color:rgba(255,255,255,0.7);line-height:2;">
+      <li>Xvestora ne garantit pas la disponibilité, le prix ou la qualité d'une opportunité spécifique</li>
+      <li>Les informations fournies ne constituent pas un conseil juridique ou financier au sens légal</li>
+      <li>L'investisseur demeure seul responsable de ses décisions d'investissement</li>
+      <li>Xvestora ne peut être tenu responsable de décisions prises sur la base de ses conseils sans due diligence indépendante</li>
+    </ul>
+    <div class="legal-rule"></div>
+
+    <h2>7. Confidentialité</h2>
+    <p>Xvestora s'engage à traiter avec la plus stricte confidentialité toutes les informations partagées par les investisseurs dans le cadre d'un mandat ou d'une mise en relation. Toute information sur les actifs présentés est strictement confidentielle et ne peut être divulguée à des tiers sans autorisation écrite.</p>
+    <div class="legal-rule"></div>
+
+    <h2>8. Propriété Intellectuelle</h2>
+    <p>L'ensemble du contenu du site xvestora.ma (textes, design, logo, données de marché, analyses) est la propriété exclusive de Xvestora. Toute reproduction, même partielle, sans autorisation écrite préalable est interdite.</p>
+    <div class="legal-rule"></div>
+
+    <h2>9. Liens Externes</h2>
+    <p>Le site peut contenir des liens vers des sites tiers (WhatsApp, réseaux sociaux, partenaires). Xvestora n'est pas responsable du contenu ou des pratiques de confidentialité de ces sites.</p>
+    <div class="legal-rule"></div>
+
+    <h2>10. Modification des CGU</h2>
+    <p>Xvestora se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs sont invités à consulter régulièrement cette page. L'utilisation continue du site après modification vaut acceptation des nouvelles conditions.</p>
+    <div class="legal-rule"></div>
+
+    <h2>11. Droit Applicable & Juridiction</h2>
+    <p>Les présentes CGU sont régies par le <strong style="color:var(--bronze-lt);">droit marocain</strong>. En cas de litige, et à défaut de résolution amiable, les parties se soumettent à la compétence exclusive des <strong style="color:var(--bronze-lt);">tribunaux compétents de Tanger, Maroc</strong>.</p>
+    <div class="legal-rule"></div>
+
+    <h2>12. Contact</h2>
+    <p>Pour toute question relative aux présentes CGU :</p>
+    <p style="margin-top:12px;"><a href="mailto:contact@xvestora.ma" style="color:var(--bronze-lt);">contact@xvestora.ma</a> &nbsp;·&nbsp; +212 661 185 045 &nbsp;·&nbsp; Tanger, Maroc</p>
+  </div></div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand"><div class="footer-brand-name">X<em>VEST</em>ORA</div><div class="footer-brand-sub">Morocco Real Estate Advisory</div><p>Réseau consultatif foncier au Maroc. Fondé par Ibrahim Essafini & Aaz El Arab. Opportunités hors marché. Due diligence intégrée.</p></div>
+    <div class="footer-col"><h5>Plateforme</h5><ul><li><a href="#" onclick="showPage('home');return false;">Accueil</a></li><li><a href="#" onclick="showPage('how');return false;">Notre Processus</a></li><li><a href="#" onclick="showPage('services');return false;">Services</a></li><li><a href="#" onclick="showPage('about');return false;">À Propos</a></li><li><a href="#" onclick="showPage('contact');return false;">Soumettre un Brief</a></li></ul></div>
+    <div class="footer-col"><h5>Secteurs</h5><ul><li><a href="#">Immobilier & Développement</a></li><li><a href="#">Industriel & Logistique</a></li><li><a href="#">Terrain Agricole</a></li><li><a href="#">Tourisme & Hôtellerie</a></li></ul></div>
+    <div class="footer-col"><h5>Régions</h5><ul><li><a href="#">Tanger-Tétouan</a></li><li><a href="#">Casablanca-Rabat</a></li><li><a href="#">Agadir-Taghazout</a></li><li><a href="#">Souss-Massa</a></li><li><a href="#">Marrakech-Safi</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="mailto:contact@xvestora.ma">contact@xvestora.ma</a></li><li><a href="tel:+212661185045">+212 661 185 045</a></li><li><a href="https://wa.me/212661185045" target="_blank">WhatsApp Direct</a></li><li><a href="#">Tanger, Maroc</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>
+      <span class="footer-copy">© 2025 Xvestora · Réseau Consultatif Foncier · Maroc · xvestora.ma</span>
+      <div class="footer-legal"><a href="#" onclick="showPage('privacy');return false;" style="color:var(--bronze-lt);opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Politique de Confidentialité</a><a href="#" onclick="showPage('terms');return false;" style="color:var(--bronze-lt);opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">CGU</a><a href="#" onclick="showPage('contact');return false;">Soumettre un Brief</a></div>
+    </div>
+    <span class="footer-right"><a href="mailto:contact@xvestora.ma">contact@xvestora.ma</a> · <a href="tel:+212661185045">+212 661 185 045</a></span>
+  </div>
+</footer>
+
+<script>
+function showPage(name){
+  const m=document.querySelector(".nav-menu");
+  if(window.innerWidth<=640)m.style.display="none";
+  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+  const t=document.getElementById("page-"+name);
+  if(t){t.classList.add("active");window.scrollTo({top:0,behavior:"smooth"});}
+}
+function toggleMenu(){
+  const m=document.querySelector(".nav-menu");
+  const open=m.style.display==="flex";
+  if(open){m.style.display="none";}
+  else{m.style.cssText="display:flex;flex-direction:column;position:fixed;top:100px;left:0;right:0;background:rgba(8,11,18,0.98);padding:24px 6%;gap:20px;z-index:999;border-bottom:1px solid rgba(168,123,69,0.12);backdrop-filter:blur(20px);";}
+}
+(function(){
+  const nav=document.querySelector('.nav');
+  window.addEventListener('scroll',function(){
+    const y=window.scrollY;
+    nav.style.background=y>120?'rgba(6,9,15,0.97)':'rgba(8,11,18,0.92)';
+    nav.style.height=y>120?'60px':'72px';
+  },{passive:true});
+})();
+(function(){
+  const slides=document.querySelectorAll('.hero-slide');
+  const labels=['Terrains Stratégiques · Maroc','Développement Urbain · Tanger','Terres Agricoles · Souss-Massa','Zone Industrielle · Tanger Med'];
+  const progress=document.getElementById('heroProgress');
+  const labelEl=document.getElementById('slideLabel');
+  const duration=5000;
+  let current=0,startTime=null,raf=null,running=false;
+  function goTo(idx){slides[current].classList.remove('active');current=idx;slides[current].classList.add('active');if(labelEl)labelEl.textContent=labels[current];startTime=null;}
+  function tick(ts){if(!startTime)startTime=ts;const elapsed=ts-startTime;const pct=Math.min((elapsed/duration)*100,100);if(progress)progress.style.width=pct+'%';if(elapsed>=duration)goTo((current+1)%slides.length);raf=requestAnimationFrame(tick);}
+  function startSlider(){if(running)return;running=true;raf=requestAnimationFrame(tick);}
+  startSlider();
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(raf);running=false;}else startSlider();});
+})();
+function animateCounter(el){
+  const target=parseInt(el.dataset.target,10);
+  const duration=1800;
+  const start=performance.now();
+  function step(now){const progress=Math.min((now-start)/duration,1);const eased=1-Math.pow(1-progress,3);el.textContent=Math.floor(eased*target);if(progress<1)requestAnimationFrame(step);else el.textContent=target;}
+  requestAnimationFrame(step);
+}
+const counterObserver=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.tm-number[data-target]').forEach(animateCounter);counterObserver.unobserve(e.target);}});},{threshold:0.4});
+document.querySelectorAll('.trust-metrics').forEach(el=>counterObserver.observe(el));
+const sectorObserver=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.sector-pct-fill').forEach(bar=>{bar.style.animation='none';bar.offsetHeight;bar.style.animation='';});} });},{threshold:0.3});
+document.querySelectorAll('.sectors-grid').forEach(g=>sectorObserver.observe(g));
+function submitContactBrief(){
+  const name=document.getElementById('fc_name').value.trim();
+  const email=document.getElementById('fc_email').value.trim();
+  const sector=document.getElementById('fc_sector').value;
+  const budget=document.getElementById('fc_budget').value;
+  if(!name||!email||!sector||!budget){alert('Veuillez remplir les champs obligatoires : Nom, Email, Secteur et Budget.');return;}
+  const subject=encodeURIComponent('Brief Investissement — Xvestora');
+  const body=encodeURIComponent('Nom: '+name+'\nSociété: '+(document.getElementById('fc_company').value||'N/A')+'\nEmail: '+email+'\nTéléphone: '+(document.getElementById('fc_phone').value||'N/A')+'\n\nSecteur: '+sector+'\nRégion: '+(document.getElementById('fc_region').value||'N/A')+'\nBudget: '+budget+'\nType: '+(document.getElementById('fc_type').value||'N/A')+'\n\nBrief:\n'+(document.getElementById('fc_brief').value||'N/A'));
+  window.location.href='mailto:contact@xvestora.ma?subject='+subject+'&body='+body;
+}
+</script>
+
+<!-- ██████ PRIVACY ██████ -->
+<div class="page" id="page-privacy">
+  <div class="page-hero"><div class="page-hero-inner"><span class="section-tag">Légal</span><h1>Politique de<br><em>Confidentialité</em></h1><p>Comment Xvestora collecte, utilise et protège vos informations.</p></div></div>
+  <div class="section section-void"><div class="legal-content">
+    <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-bottom:32px;">Dernière mise à jour : Janvier 2025 · Xvestora · Tanger, Maroc · contact@xvestora.ma</p>
+    <h2>1. Qui Nous Sommes</h2><p>Xvestora est un réseau consultatif et de sourcing foncier basé à Tanger, Maroc. Contactez-nous à contact@xvestora.ma ou +212 661 185 045.</p>
+    <div class="legal-rule"></div>
+    <h2>2. Informations Collectées</h2><p>Via notre formulaire, nous collectons volontairement : nom complet, email, téléphone, critères d'investissement (secteur, région, budget, type), et brief libre. Aucune information de paiement ni pièce d'identité.</p>
+    <div class="legal-rule"></div>
+    <h2>3. Utilisation</h2><p>Informations utilisées exclusivement pour répondre à votre brief, activer notre sourcing, vous envoyer une sélection ciblée, et coordonner le processus si vous poursuivez. Nous ne vendons ni ne partageons vos données.</p>
+    <div class="legal-rule"></div>
+    <h2>4. Confidentialité</h2><p>Tous les briefs, communications et identités sont traités comme strictement confidentiels.</p>
+    <div class="legal-rule"></div>
+    <h2>5. Conservation</h2><p>Données conservées pendant notre engagement et jusqu'à 24 mois après. Suppression sur demande : contact@xvestora.ma</p>
+    <div class="legal-rule"></div>
+    <h2>6. Contact</h2><p><a href="mailto:contact@xvestora.ma">contact@xvestora.ma</a> · +212 661 185 045 · Tanger, Maroc</p>
+  </div></div>
+</div>
+
+<!-- ██████ TERMS ██████ -->
+<div class="page" id="page-terms">
+  <div class="page-hero"><div class="page-hero-inner"><span class="section-tag">Légal</span><h1>Conditions<br><em>Générales d'Utilisation</em></h1><p>Les conditions dans lesquelles Xvestora fournit ses services consultatifs.</p></div></div>
+  <div class="section section-void"><div class="legal-content">
+    <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-bottom:32px;">Dernière mise à jour : Janvier 2025 · Xvestora · Tanger, Maroc · contact@xvestora.ma</p>
+    <h2>1. Nature des Services</h2><p>Xvestora fournit des services de conseil en investissement foncier, sourcing et exécution au Maroc. Réseau consultatif professionnel, pas un courtier agréé. Étapes notariales et transactionnelles réalisées par des notaires et experts juridiques marocains agréés.</p>
+    <div class="legal-rule"></div>
+    <h2>2. Aucune Garantie de Résultats</h2><p>La soumission d'un brief ne garantit pas l'identification d'une opportunité correspondante. Aucune représentation sur disponibilité, prix ou calendrier d'une opportunité spécifique.</p>
+    <div class="legal-rule"></div>
+    <h2>3. Responsabilité de l'Investisseur</h2><p>Les investisseurs sont responsables de leur propre due diligence. Les services Xvestora sont un support professionnel — ne remplacent pas un conseil juridique ou financier indépendant.</p>
+    <div class="legal-rule"></div>
+    <h2>4. Honoraires</h2><p>Honoraires basés sur le succès, convenus par écrit avant le début des travaux. Soumission initiale et sourcing préliminaire fournis sans frais.</p>
+    <div class="legal-rule"></div>
+    <h2>5. Droit Applicable</h2><p>Ces conditions sont régies par le droit marocain. Litiges soumis aux tribunaux compétents de Tanger, Maroc.</p>
+    <div class="legal-rule"></div>
+    <h2>6. Contact</h2><p><a href="mailto:contact@xvestora.ma">contact@xvestora.ma</a> · +212 661 185 045 · Tanger, Maroc</p>
+  </div></div>
+</div>
+  </div>
+</body>
+</html>
