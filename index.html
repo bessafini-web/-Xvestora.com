@@ -378,7 +378,97 @@ a{text-decoration:none;color:inherit}
   .hero-badge-v2{display:none}
   .hero-h1-v2{font-size:clamp(28px,8vw,40px)}
   .hero-sub-v2{font-size:13px}
+  .contact-split{gap:32px}
+  .frow{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr !important}
 }
+
+/* ── Contact form dark styling ─────────────────────────────
+   The form uses .form-group / .contact-form classes.
+   The existing .field rules do NOT apply to this form.
+   These rules fix the white browser-default inputs.
+──────────────────────────────────────────────────────────── */
+.contact-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.contact-form .form-group{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.contact-form .form-group label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:500;display:block}
+.contact-form .form-group input,
+.contact-form .form-group select,
+.contact-form .form-group textarea{
+  background-color:#1A2338;
+  border:1px solid rgba(168,123,69,0.30);
+  border-radius:2px;
+  color:#FFFFFF;
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:300;
+  padding:13px 16px;
+  width:100%;
+  outline:none;
+  -webkit-appearance:none;
+  appearance:none;
+  color-scheme:dark;
+  transition:border-color 220ms ease,background-color 220ms ease,box-shadow 220ms ease
+}
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder{color:rgba(255,255,255,0.25);font-weight:300}
+.contact-form .form-group select{
+  cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23A87B45' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  background-color:#1A2338;
+  padding-right:38px
+}
+.contact-form .form-group select option{background:#1A2338;color:#FFFFFF}
+.contact-form .form-group textarea{resize:vertical;min-height:140px;max-height:280px;line-height:1.7;overflow:auto}
+.contact-form .form-group input:focus,
+.contact-form .form-group select:focus,
+.contact-form .form-group textarea:focus{
+  border-color:#A87B45;
+  background-color:#202840;
+  box-shadow:0 0 0 3px rgba(168,123,69,0.13);
+  outline:none
+}
+.contact-form .form-group input:hover:not(:focus),
+.contact-form .form-group select:hover:not(:focus),
+.contact-form .form-group textarea:hover:not(:focus){
+  border-color:rgba(168,123,69,0.55);
+  background-color:#1e2a40
+}
+/* Autofill override */
+.contact-form .form-group input:-webkit-autofill,
+.contact-form .form-group input:-webkit-autofill:focus{
+  -webkit-box-shadow:0 0 0 1000px #1A2338 inset;
+  -webkit-text-fill-color:#FFFFFF;
+  caret-color:#FFFFFF
+}
+/* Submit button — was unstyled .btn-primary */
+.contact-form .btn-primary{
+  width:100%;
+  padding:15px 32px;
+  background:#A87B45;
+  color:#12192A;
+  border:none;
+  border-radius:2px;
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  cursor:pointer;
+  -webkit-appearance:none;
+  appearance:none;
+  transition:background 220ms ease,transform 220ms ease,box-shadow 220ms ease
+}
+.contact-form .btn-primary:hover{
+  background:#BF9260;
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(168,123,69,0.28)
+}
+/* WhatsApp float — toned down, bronze instead of green */
+.wa-float{background:rgba(168,123,69,0.12) !important;color:var(--bronze) !important;box-shadow:0 4px 20px rgba(168,123,69,0.15) !important;border:1px solid rgba(168,123,69,0.30) !important}
+.wa-float svg{fill:var(--bronze) !important}
+.wa-float:hover{background:rgba(168,123,69,0.22) !important;box-shadow:0 8px 28px rgba(168,123,69,0.25) !important}
 </style>
 </head>
 <body>
@@ -412,7 +502,7 @@ a{text-decoration:none;color:inherit}
 <!-- NAV -->
 <nav class="nav">
   <a href="#" class="nav-brand" onclick="showPage('home');return false;">
-    <img src="logo.png" alt="Xvestora" style="height:80px;width:auto;object-fit:contain;mix-blend-mode:lighten;">
+    <img src="logo.png" alt="Xvestora" style="height:36px;max-height:36px;width:auto;display:block;object-fit:contain;transition:opacity 250ms ease;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
   </a>
   <ul class="nav-menu">
     <li><a href="#" onclick="showPage('home');return false;">Accueil</a></li>
