@@ -520,10 +520,43 @@ a{text-decoration:none;color:inherit}
 
   <div class="hero" id="hero-v2">
     <div class="hero-video-wrap">
-      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1800&q=85');"></div>
-      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1800&q=85');"></div>
-      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1800&q=85');"></div>
-      <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1800&q=85');"></div>
+
+      <!-- Slide 1: Strategic Land / Terrain -->
+      <div class="hero-slide active" data-label="Strategic Land · Morocco">
+        <video autoplay muted loop playsinline preload="auto"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <source src="https://videos.pexels.com/video-files/3695965/3695965-uhd_2732_1440_25fps.mp4" type="video/mp4">
+          <source src="https://videos.pexels.com/video-files/6967152/6967152-uhd_2732_1440_25fps.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Slide 2: Industrial Zone / Tanger Med -->
+      <div class="hero-slide" data-label="Industrial Zone · Tanger Med">
+        <video autoplay muted loop playsinline preload="none"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <source src="https://videos.pexels.com/video-files/4036034/4036034-uhd_2732_1440_25fps.mp4" type="video/mp4">
+          <source src="https://videos.pexels.com/video-files/3802790/3802790-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Slide 3: Agricultural Land / Souss-Massa -->
+      <div class="hero-slide" data-label="Agricultural Land · Souss-Massa">
+        <video autoplay muted loop playsinline preload="none"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <source src="https://videos.pexels.com/video-files/6967152/6967152-uhd_2732_1440_25fps.mp4" type="video/mp4">
+          <source src="https://videos.pexels.com/video-files/3695965/3695965-uhd_2732_1440_25fps.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Slide 4: Port Infrastructure -->
+      <div class="hero-slide" data-label="Port Infrastructure · Morocco">
+        <video autoplay muted loop playsinline preload="none"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+          <source src="https://videos.pexels.com/video-files/3802790/3802790-uhd_3840_2160_25fps.mp4" type="video/mp4">
+          <source src="https://videos.pexels.com/video-files/4036034/4036034-uhd_2732_1440_25fps.mp4" type="video/mp4">
+        </video>
+      </div>
+
     </div>
     <div class="hero-overlay-v2"></div>
     <div class="hero-grain"></div>
@@ -1047,15 +1080,56 @@ a{text-decoration:none;color:inherit}
       if (menu) menu.classList.toggle('open');
     }
 
-    // Init - show home page only
+    // Init - show home page only + start video slideshow
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.page').forEach(function(p) {
         p.style.display = 'none';
       });
       var home = document.getElementById('page-home');
       if (home) home.style.display = 'block';
+
+      // ── VIDEO SLIDESHOW ──────────────────────────────────
+      var slides     = document.querySelectorAll('.hero-slide');
+      var labelEl    = document.querySelector('.hero-slide-label');
+      var current    = 0;
+      var interval   = 7000; // ms per slide
+
+      function activateSlide(idx) {
+        slides.forEach(function(s, i) {
+          var vid = s.querySelector('video');
+          if (i === idx) {
+            s.classList.add('active');
+            if (vid) { vid.currentTime = 0; vid.play().catch(function(){}); }
+            if (labelEl) labelEl.textContent = s.dataset.label || '';
+          } else {
+            s.classList.remove('active');
+            if (vid) { vid.pause(); }
+          }
+        });
+      }
+
+      // Play first slide immediately
+      activateSlide(0);
+
+      // Cycle every 7 seconds
+      setInterval(function() {
+        current = (current + 1) % slides.length;
+        activateSlide(current);
+      }, interval);
+      // ────────────────────────────────────────────────────
     });
 
+
+    function handleContactForm(e) {
+      e.preventDefault();
+      var btn = e.target.querySelector('.btn-primary');
+      if (btn) { btn.textContent = 'Envoi en cours…'; btn.disabled = true; }
+      setTimeout(function() {
+        var success = document.getElementById('form-success');
+        if (success) { success.style.display = 'block'; }
+        e.target.style.display = 'none';
+      }, 900);
+    }
 
     function showMarket(tab) {
       ['immo','tourisme','export','industrie'].forEach(t => {
