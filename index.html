@@ -29,7 +29,7 @@ a{text-decoration:none;color:inherit}
 
 /* NAV */
 .nav{position:fixed;top:28px;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:56px;background:rgba(8,11,18,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(168,123,69,0.15);transition:height 0.3s var(--transition);overflow:visible}
-.nav-brand{display:flex;align-items:center;gap:16px}
+.nav-brand{display:flex;align-items:center;gap:16px;overflow:hidden;height:50px}
 .nav-logo-mark{width:36px;height:36px;border:1px solid rgba(168,123,69,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;background:var(--bronze-pale);flex-shrink:0}
 .nav-logo-mark svg{width:18px;height:18px;stroke:var(--bronze);fill:none;stroke-width:1.5}
 .nav-brand-col{display:flex;flex-direction:column;gap:2px}
@@ -507,7 +507,7 @@ a{text-decoration:none;color:inherit}
 <!-- NAV -->
 <nav class="nav">
   <a href="#" class="nav-brand" onclick="showPage('home');return false;">
-    <img src="xvestora_logo_transparent.png" alt="Xvestora" style="height:64px;max-height:64px;width:auto;display:block;object-fit:contain;transition:opacity 250ms ease;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+    <img src="xvestora_logo_transparent.png" alt="Xvestora" style="height:50px;max-height:50px;width:auto;display:block;object-fit:contain;object-position:top left;transition:opacity 250ms ease;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
   </a>
   <ul class="nav-menu">
     <li><a href="#" onclick="showPage('home');return false;">Accueil</a></li>
@@ -526,39 +526,35 @@ a{text-decoration:none;color:inherit}
   <div class="hero" id="hero-v2">
     <div class="hero-video-wrap">
 
-      <!-- Slide 1: Strategic Land / Terrain -->
+      <!-- Slide 1: Desert / Land -->
       <div class="hero-slide active" data-label="Strategic Land · Morocco">
         <video autoplay muted loop playsinline preload="auto"
                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-          <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-moroccan-village-7891/1080p.mp4" type="video/mp4">
-          <source src="https://cdn.coverr.co/videos/coverr-desert-landscape-4379/1080p.mp4" type="video/mp4">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-vast-desert-34717-large.mp4" type="video/mp4">
         </video>
       </div>
 
-      <!-- Slide 2: Industrial Zone -->
+      <!-- Slide 2: City aerial -->
       <div class="hero-slide" data-label="Industrial Zone · Tanger Med">
         <video autoplay muted loop playsinline preload="none"
                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-          <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-city-at-night-5066/1080p.mp4" type="video/mp4">
-          <source src="https://cdn.coverr.co/videos/coverr-highway-aerial-view-1647/1080p.mp4" type="video/mp4">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-11-large.mp4" type="video/mp4">
         </video>
       </div>
 
-      <!-- Slide 3: Agricultural Land -->
+      <!-- Slide 3: Green fields -->
       <div class="hero-slide" data-label="Agricultural Land · Souss-Massa">
         <video autoplay muted loop playsinline preload="none"
                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-          <source src="https://cdn.coverr.co/videos/coverr-green-fields-from-above-6395/1080p.mp4" type="video/mp4">
-          <source src="https://cdn.coverr.co/videos/coverr-aerial-footage-of-farmland-5101/1080p.mp4" type="video/mp4">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-green-fields-from-a-drone-1853-large.mp4" type="video/mp4">
         </video>
       </div>
 
-      <!-- Slide 4: Coastal / Tourism -->
+      <!-- Slide 4: Coastline -->
       <div class="hero-slide" data-label="Coastal Investment · Morocco">
         <video autoplay muted loop playsinline preload="none"
                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-          <source src="https://cdn.coverr.co/videos/coverr-ocean-aerial-view-2249/1080p.mp4" type="video/mp4">
-          <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-beach-4876/1080p.mp4" type="video/mp4">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-the-sea-and-beach-1584-large.mp4" type="video/mp4">
         </video>
       </div>
 
