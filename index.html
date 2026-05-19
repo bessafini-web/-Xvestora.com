@@ -28,7 +28,7 @@ a{text-decoration:none;color:inherit}
 @keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* NAV */
-.nav{position:fixed;top:28px;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:56px;background:rgba(8,11,18,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(168,123,69,0.15);transition:height 0.3s var(--transition)}
+.nav{position:fixed;top:28px;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:56px;background:rgba(8,11,18,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(168,123,69,0.15);transition:height 0.3s var(--transition);overflow:visible}
 .nav-brand{display:flex;align-items:center;gap:16px}
 .nav-logo-mark{width:36px;height:36px;border:1px solid rgba(168,123,69,0.4);border-radius:2px;display:flex;align-items:center;justify-content:center;background:var(--bronze-pale);flex-shrink:0}
 .nav-logo-mark svg{width:18px;height:18px;stroke:var(--bronze);fill:none;stroke-width:1.5}
@@ -41,8 +41,12 @@ a{text-decoration:none;color:inherit}
 .nav-menu a:hover{color:var(--bronze)}
 .nav-cta{background:transparent !important;border:1px solid rgba(168,123,69,0.5) !important;color:var(--bronze) !important;padding:9px 22px;border-radius:1px;font-weight:500 !important;transition:all 0.25s !important}
 .nav-cta:hover{background:var(--bronze) !important;color:var(--void) !important;border-color:var(--bronze) !important}
-.nav-ham{display:none;flex-direction:column;gap:5px;background:none;padding:4px}
+.nav-ham{display:none;flex-direction:column;gap:5px;background:none;padding:4px;border:none;cursor:pointer}
 .nav-ham span{width:22px;height:1px;background:rgba(255,255,255,0.6);display:block;transition:all 0.3s}
+.nav-menu.open{display:flex;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:rgba(8,11,18,0.98);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:16px 5% 24px;gap:0;border-bottom:1px solid rgba(168,123,69,0.2);z-index:999}
+.nav-menu.open li{border-bottom:1px solid rgba(255,255,255,0.05)}
+.nav-menu.open a{display:block;padding:14px 0;font-size:12px;letter-spacing:2px;color:rgba(255,255,255,0.7)}
+.nav-menu.open .nav-cta{margin:16px 0 0;display:block;text-align:center;padding:12px;border:1px solid rgba(168,123,69,0.5) !important}
 
 /* PAGE SYSTEM */
 .page{display:none}.page.active{display:block}
@@ -470,6 +474,7 @@ a{text-decoration:none;color:inherit}
 .wa-float svg{fill:var(--bronze) !important}
 .wa-float:hover{background:rgba(168,123,69,0.22) !important;box-shadow:0 8px 28px rgba(168,123,69,0.25) !important}
 </style>
+<link rel="icon" type="image/png" href="xvestora_logo_transparent.png" />
 </head>
 <body>
 
@@ -502,7 +507,7 @@ a{text-decoration:none;color:inherit}
 <!-- NAV -->
 <nav class="nav">
   <a href="#" class="nav-brand" onclick="showPage('home');return false;">
-    <img src="logo.png" alt="Xvestora" style="height:46px;max-height:46px;width:auto;display:block;object-fit:contain;transition:opacity 250ms ease;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+    <img src="xvestora_logo_transparent.png" alt="Xvestora" style="height:64px;max-height:64px;width:auto;display:block;object-fit:contain;transition:opacity 250ms ease;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
   </a>
   <ul class="nav-menu">
     <li><a href="#" onclick="showPage('home');return false;">Accueil</a></li>
@@ -577,8 +582,8 @@ a{text-decoration:none;color:inherit}
           Explore Opportunities
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <a href="https://calendly.com/xvestora" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;margin-left:16px;border:1px solid rgba(168,123,69,0.5);color:var(--bronze);padding:14px 28px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;border-radius:1px;transition:all 0.25s;cursor:pointer;text-decoration:none;" onmouseover="this.style.background='rgba(168,123,69,0.1)'" onmouseout="this.style.background='transparent'">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <a href="mailto:contact@xvestora.ma?subject=Advisory%20Call%20Request" style="display:inline-flex;align-items:center;gap:10px;margin-left:16px;border:1px solid rgba(168,123,69,0.5);color:var(--bronze);padding:14px 28px;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;border-radius:1px;transition:all 0.25s;cursor:pointer;text-decoration:none;" onmouseover="this.style.background='rgba(168,123,69,0.1)'" onmouseout="this.style.background='transparent'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Book an Advisory Call
         </a>
         <p class="hero-cta-note">Strictement confidentiel &nbsp;·&nbsp; Réponse 48h &nbsp;·&nbsp; Sur candidature uniquement</p>
@@ -1663,13 +1668,6 @@ a{text-decoration:none;color:inherit}
             <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;">Secteurs maîtrisés en profondeur</div>
           </div>
         </div>
-        <div style="padding:20px 24px;background:rgba(168,123,69,0.06);border:1px solid rgba(168,123,69,0.15);margin-bottom:24px;">
-          <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:10px;">Contact Direct · Aaz El Arab</div>
-          <a href="tel:+212661228016" style="display:inline-flex;align-items:center;gap:10px;color:var(--white);text-decoration:none;font-size:18px;font-family:var(--serif);font-weight:300;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--bronze)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.33 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.128.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.572 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +212 661 228 016
-          </a>
-        </div>
         <div class="quote-bar" style="margin-top:0;">"Dans ce métier, c'est le réseau humain qui fait la différence. Pas les portails. Pas les algorithmes. Les relations de confiance construites sur le terrain, deal après deal, depuis plus de trente ans."<br><span style="font-size:11px;color:rgba(168,123,69,0.6);font-style:normal;letter-spacing:1px;margin-top:8px;display:block;">— Aaz El Arab · Co-Fondateur, Xvestora</span></div>
       </div>
     </div>
@@ -2042,7 +2040,9 @@ a{text-decoration:none;color:inherit}
         </div>
       </div>
       <div class="contact-form-wrap">
-        <form class="contact-form" onsubmit="handleContactForm(event)">
+        <form class="contact-form"
+              action="https://formspree.io/f/4df1af20-1d44-46f3-80e4-8af031627074"
+              method="POST">
           <div class="form-row">
             <div class="form-group">
               <label>Nom complet *</label>
@@ -2101,7 +2101,7 @@ a{text-decoration:none;color:inherit}
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="logo.png" alt="Xvestora" style="height:56px;width:auto;object-fit:contain;margin-bottom:12px;display:block;">
+      <img src="xvestora_logo_transparent.png" alt="Xvestora" style="height:72px;width:auto;object-fit:contain;margin-bottom:12px;display:block;">
       <div class="footer-brand-sub">Morocco Real Estate Advisory</div>
       <p>Réseau consultatif foncier au Maroc. Fondé par Ibrahim Essafini & Aaz El Arab. Opportunités hors marché. Due diligence intégrée.</p>
     </div>
