@@ -647,8 +647,9 @@ button  { cursor: pointer; font-family: var(--font-body); }
     /* Top vignette (behind nav) + bottom vignette */
     linear-gradient(
       to bottom,
-      rgba(10, 14, 39, 0.55) 0%,
-      rgba(10, 14, 39, 0.00) 35%,
+      rgba(10, 14, 39, 0.92) 0%,
+      rgba(10, 14, 39, 0.55) 18%,
+      rgba(10, 14, 39, 0.00) 38%,
       rgba(10, 14, 39, 0.00) 60%,
       rgba(10, 14, 39, 0.88) 100%
     );
