@@ -359,6 +359,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
   letter-spacing: 0.04em;
   color: var(--white);
 }
+.nav__logo-fallback[hidden] { display: none; }
 
 .nav__logo-x { color: var(--gold); }
 
