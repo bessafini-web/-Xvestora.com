@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://xvestora.com/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/" />
@@ -12,45 +12,62 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/" />
   </url>
 
-  <!-- Sections principales (ancres — indexables via Google) -->
   <url>
-    <loc>https://xvestora.com/#services</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://xvestora.com/processus.html</loc>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/processus.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/processus.html" />
   </url>
 
   <url>
-    <loc>https://xvestora.com/#secteurs</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://xvestora.com/services.html</loc>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/services.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/services.html" />
   </url>
 
   <url>
-    <loc>https://xvestora.com/#processus</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://xvestora.com/secteurs.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/secteurs.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/secteurs.html" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/about.html</loc>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/about.html" />
   </url>
 
+  <url>
+    <loc>https://xvestora.com/contact.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/contact.html" />
+  </url>
+
+  <!-- Sections principales (ancres) -->
   <url>
     <loc>https://xvestora.com/#case-studies</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://xvestora.com/#maroc</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://xvestora.com/#access</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Processus — Xvestora | Investissement Foncier Privé Maroc</title>
+  <meta name="description" content="Découvrez le processus Xvestora en 5 étapes structurées : du brief d'investissement à la signature notariale. Accès privé, due diligence rigoureuse, transactions confidentielles." />
+  <link rel="canonical" href="https://xvestora.com/processus.html" />
+  <link rel="icon" type="image/png" href="assets/images/xvestora_logo_transparent.png" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="pages.css" />
+  <style>
+    /* ── Steps ── */
+    .steps { display: flex; flex-direction: column; gap: 0; }
+    .step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0 2rem;
+      padding: 2.8rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .step:last-child { border-bottom: none; }
+    .step__num-col { display: flex; flex-direction: column; align-items: center; }
+    .step__num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--bronze);
+      line-height: 1;
+      width: 64px;
+      text-align: center;
+    }
+    .step__line {
+      flex: 1;
+      width: 1px;
+      background: var(--border);
+      margin: .6rem 0;
+    }
+    .step:last-child .step__line { display: none; }
+    .step__body { padding-top: .3rem; }
+    .step__label {
+      font-size: .63rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--bronze);
+      margin-bottom: .5rem;
+    }
+    .step__title {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: .9rem;
+    }
+    .step__desc { font-size: .93rem; color: var(--text-70); line-height: 1.75; margin-bottom: 1.2rem; max-width: 680px; }
+    .step__tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .step__tag {
+      font-size: .67rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--bronze-lt);
+      background: var(--bronze-pale);
+      border: 1px solid var(--bronze-border);
+      padding: .3rem .75rem;
+      border-radius: 2px;
+    }
+    /* ── Timeline expectations ── */
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .expect-card {
+      background: var(--void-card);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--bronze);
+      padding: 1.8rem;
+    }
+    .expect-card__value {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: var(--bronze-lt);
+      line-height: 1;
+      margin-bottom: .5rem;
+    }
+    .expect-card__label { font-size: .8rem; color: var(--text-70); }
+    @media (max-width: 700px) {
+      .step { grid-template-columns: 1fr; }
+      .step__num-col { flex-direction: row; align-items: center; gap: 1rem; }
+      .step__line { display: none; }
+      .expect-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker__track">
+    <span class="ticker__item"><span class="ticker__label">IDE Maroc</span><span class="ticker__value ticker__value--up">+34% 2023</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Terrain Agri · Souss-Massa</span><span class="ticker__value ticker__value--up">Forte Demande</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Tourisme Maroc</span><span class="ticker__value ticker__value--up">14,5M visiteurs</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Coupe du Monde 2030</span><span class="ticker__value ticker__value--gold">Co-organisateur</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Immobilier Marrakech</span><span class="ticker__value ticker__value--up">+18% / an</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Zone Industrielle · Tanger</span><span class="ticker__value ticker__value--up">Expansion Active</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">IDE Maroc</span><span class="ticker__value ticker__value--up">+34% 2023</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Terrain Agri · Souss-Massa</span><span class="ticker__value ticker__value--up">Forte Demande</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Tourisme Maroc</span><span class="ticker__value ticker__value--up">14,5M visiteurs</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Coupe du Monde 2030</span><span class="ticker__value ticker__value--gold">Co-organisateur</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Immobilier Marrakech</span><span class="ticker__value ticker__value--up">+18% / an</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Zone Industrielle · Tanger</span><span class="ticker__value ticker__value--up">Expansion Active</span></span><span class="ticker__sep">◆</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/xvestora_logo_transparent.png" alt="Xvestora" class="nav__logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.removeAttribute('hidden')" />
+      <span class="nav__logo-fallback" hidden>Xvestora</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="processus.html">Processus</a></li>
+      <li><a href="secteurs.html">Secteurs</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">À Propos</a></li>
+    </ul>
+    <a href="contact.html" class="nav__cta">Soumettre un Brief</a>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="index.html">Accueil</a>
+    <a href="processus.html">Processus</a>
+    <a href="secteurs.html">Secteurs</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">À Propos</a>
+    <a href="contact.html" class="nav__mobile-cta">Soumettre un Brief</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span class="breadcrumb__sep">/</span>
+      <span>Processus</span>
+    </div>
+    <p class="page-hero__label">Comment ça fonctionne</p>
+    <h1 class="page-hero__title">Le Processus<br /><em>en 5 Étapes.</em></h1>
+    <p class="page-hero__sub">Du brief initial à la signature notariale — un cadre structuré, confidentiel et adapté aux investisseurs qualifiés qui déploient du capital dans le foncier marocain.</p>
+  </div>
+</header>
+
+<!-- STEPS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="steps">
+
+      <div class="step reveal">
+        <div class="step__num-col">
+          <div class="step__num">01</div>
+          <div class="step__line"></div>
+        </div>
+        <div class="step__body">
+          <p class="step__label">Entrée dans le Réseau</p>
+          <h2 class="step__title">Soumission du Brief d'Investissement</h2>
+          <p class="step__desc">Vous remplissez un formulaire confidentiel en 3 minutes : profil investisseur, ticket indicatif, secteurs d'intérêt, géographie ciblée et horizon d'investissement. Ce brief devient notre feuille de route. Il n'y a aucun engagement à ce stade — seulement le début d'une conversation privée.</p>
+          <div class="step__tags">
+            <span class="step__tag">Formulaire en ligne</span>
+            <span class="step__tag">100% confidentiel</span>
+            <span class="step__tag">Aucun engagement</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__num-col">
+          <div class="step__num">02</div>
+          <div class="step__line"></div>
+        </div>
+        <div class="step__body">
+          <p class="step__label">Qualification</p>
+          <h2 class="step__title">Validation & Onboarding sous 48h</h2>
+          <p class="step__desc">Chaque candidature est examinée individuellement par notre équipe. Nous vérifions la cohérence du profil, la sérieux de la démarche et l'adéquation avec notre réseau de vendeurs actifs. Si votre profil est retenu, nous planifions un premier échange confidentiel pour affiner vos critères et vous présenter le fonctionnement du réseau.</p>
+          <div class="step__tags">
+            <span class="step__tag">Réponse sous 48h</span>
+            <span class="step__tag">Appel de qualification</span>
+            <span class="step__tag">NDA si requis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__num-col">
+          <div class="step__num">03</div>
+          <div class="step__line"></div>
+        </div>
+        <div class="step__body">
+          <p class="step__label">Recherche Active</p>
+          <h2 class="step__title">Sourcing Ciblé via Notre Réseau Privé</h2>
+          <p class="step__desc">Vos critères deviennent notre mandat de sourcing actif. Nous activons notre réseau de propriétaires, notaires, promoteurs et intermédiaires de confiance à travers le Maroc. Contrairement à une recherche sur les portails publics, nous accédons à des actifs non diffusés — des terrains dont les propriétaires cherchent une cession discrète, rapide et à des conditions équilibrées.</p>
+          <div class="step__tags">
+            <span class="step__tag">Réseau notarial</span>
+            <span class="step__tag">Propriétaires privés</span>
+            <span class="step__tag">Actifs non listés</span>
+            <span class="step__tag">Toutes régions Maroc</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__num-col">
+          <div class="step__num">04</div>
+          <div class="step__line"></div>
+        </div>
+        <div class="step__body">
+          <p class="step__label">Vérification</p>
+          <h2 class="step__title">Due Diligence & Analyse de l'Actif</h2>
+          <p class="step__desc">Avant qu'une opportunité vous soit présentée, elle passe par une revue structurée : vérification du titre foncier, statut juridique du terrain (melk, immatriculé, en cours), contraintes d'urbanisme, zonage, servitudes, et analyse du contexte local. Vous recevez un dossier factuel — pas un pitch commercial. La clarté est notre standard.</p>
+          <div class="step__tags">
+            <span class="step__tag">Vérification titre</span>
+            <span class="step__tag">Statut foncier</span>
+            <span class="step__tag">Zonage & PLU</span>
+            <span class="step__tag">Analyse marché local</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__num-col">
+          <div class="step__num">05</div>
+          <div class="step__line"></div>
+        </div>
+        <div class="step__body">
+          <p class="step__label">Finalisation</p>
+          <h2 class="step__title">Négociation, Acte & Signature Notariale</h2>
+          <p class="step__desc">Si l'opportunité correspond à vos critères, nous coordonnons la phase de négociation et la structuration de la transaction — prix, conditions suspensives, calendrier. Nous facilitons la mise en relation avec les conseils juridiques locaux et coordonnons jusqu'à la signature de l'acte authentique chez notaire. Vous ne gérez pas la logistique : nous le faisons pour vous.</p>
+          <div class="step__tags">
+            <span class="step__tag">Négociation assistée</span>
+            <span class="step__tag">Coordination juridique</span>
+            <span class="step__tag">Acte notarié</span>
+            <span class="step__tag">Accompagnement complet</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="section-pad section-alt">
+  <div class="container">
+    <div class="section-label reveal">Ce que vous pouvez attendre</div>
+    <h2 class="section-headline reveal">Des chiffres issus<br /><em>de nos transactions récentes.</em></h2>
+    <div class="expect-grid">
+      <div class="expect-card reveal">
+        <div class="expect-card__value">48h</div>
+        <div class="expect-card__label">Délai de réponse garanti après soumission du brief</div>
+      </div>
+      <div class="expect-card reveal">
+        <div class="expect-card__value">4–8</div>
+        <div class="expect-card__label">Mois en moyenne du brief initial à la signature notariale</div>
+      </div>
+      <div class="expect-card reveal">
+        <div class="expect-card__value">100%</div>
+        <div class="expect-card__label">Des actifs présentés sourcés hors-marché, non listés publiquement</div>
+      </div>
+    </div>
+    <div style="margin-top:2rem; padding:1.8rem; background:var(--void-card); border:1px solid var(--border); border-left:2px solid var(--bronze); max-width:720px;" class="reveal">
+      <p style="font-family:var(--font-display);font-size:1.15rem;color:var(--text-90);line-height:1.6;">« Nous ne diffusons jamais d'alertes en masse. Chaque opportunité est présentée à un nombre limité d'investisseurs dont le profil correspond précisément aux caractéristiques de l'actif. »</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="container">
+    <h2 class="cta-band__title reveal">Prêt à soumettre<br /><em>votre brief ?</em></h2>
+    <p class="cta-band__sub reveal">5 minutes pour établir votre profil. Notre équipe examine chaque candidature individuellement et vous répond sous 48h.</p>
+    <div class="cta-band__actions reveal">
+      <a href="contact.html" class="btn btn--primary">Soumettre un Brief</a>
+      <a href="https://wa.me/212661185045?text=Bonjour%20Xvestora%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20processus%20d%27investissement." target="_blank" rel="noopener" class="btn btn--ghost">Contacter via WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-logo">
+          <img src="assets/images/xvestora_logo_transparent.png" alt="Xvestora" onerror="this.style.display='none'" />
+          <span class="footer__brand-name">Xvestora</span>
+        </div>
+        <p class="footer__tagline">Invest with Vision</p>
+        <p class="footer__desc">Cabinet Conseil en Investissement Foncier Privé. Maroc · International.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="processus.html">Processus</a></li>
+          <li><a href="secteurs.html">Secteurs</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">À Propos</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Secteurs</h4>
+        <ul>
+          <li><a href="secteurs.html#immobilier">Immobilier</a></li>
+          <li><a href="secteurs.html#industrie">Industrie</a></li>
+          <li><a href="secteurs.html#agriculture">Agriculture</a></li>
+          <li><a href="secteurs.html#tourisme">Tourisme</a></li>
+          <li><a href="secteurs.html#energie">Énergie</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#off-market">Hors-Marché</a></li>
+          <li><a href="services.html#conseil">Conseil Stratégique</a></li>
+          <li><a href="services.html#cle-en-main">Clé en Main</a></li>
+          <li><a href="services.html#reseau">Réseau Privé</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Soumettre un Brief</a></li>
+          <li><a href="https://wa.me/212661185045">WhatsApp</a></li>
+          <li><a href="mailto:contact@xvestora.com">Email</a></li>
+          <li><a href="privacy.html">Confidentialité</a></li>
+          <li><a href="terms.html">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Xvestora. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="privacy.html">Politique de Confidentialité</a>
+        <a href="terms.html">Conditions d'Utilisation</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/212661185045?text=Bonjour%20Xvestora%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20processus." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg class="wa-float__icon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L0 24l6.335-1.507A11.933 11.933 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.376l-.36-.213-3.728.887.928-3.618-.234-.373A9.818 9.818 0 1 1 12 21.818z"/>
+  </svg>
+  <span class="wa-float__label">WhatsApp</span>
+</a>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', scrollY > 20); }, {passive:true});
+  // Burger
+  const burger = document.getElementById('burger'), mm = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => { const o = mm.classList.toggle('open'); burger.classList.toggle('open',o); burger.setAttribute('aria-expanded',o); });
+  document.addEventListener('click', e => { if(!nav.contains(e.target)){mm.classList.remove('open');burger.classList.remove('open');} });
+  // Active nav
+  const page = location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav__links a,.nav__mobile a').forEach(a=>{ if(a.getAttribute('href')===page) a.classList.add('active'); });
+  // Reveal
+  const ro = new IntersectionObserver(entries=>{ entries.forEach((e,i)=>{ if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60); ro.unobserve(e.target);} }); },{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
