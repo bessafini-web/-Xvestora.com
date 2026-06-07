@@ -249,6 +249,18 @@ button { cursor: pointer; font-family: var(--font-body); }
   pointer-events: none;
 }
 .page-hero .container { position: relative; z-index: 1; }
+
+/* Photo hero variant — background image set inline per page */
+.page-hero--photo {
+  background-size: cover;
+  background-position: center;
+  padding: 132px 0 84px;
+}
+.page-hero--photo::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(110deg, rgba(18,25,42,.94) 0%, rgba(18,25,42,.80) 45%, rgba(18,25,42,.50) 100%);
+}
 .breadcrumb {
   display: flex;
   align-items: center;
