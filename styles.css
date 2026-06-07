@@ -332,14 +332,14 @@ button  { cursor: pointer; font-family: var(--font-body); }
   flex-shrink: 0;
   text-decoration: none;
   overflow: hidden;      /* prevent any bleed outside nav bounds */
-  height: 46px;          /* lock to exact desktop height */
+  height: 70px;          /* lock to exact desktop height */
 }
 
 /* Image logo — transparent PNG, no box */
 .nav__logo-img {
-  height: 46px;          /* desktop */
+  height: 70px;          /* desktop */
   width: auto;
-  max-height: 46px;
+  max-height: 70px;
   display: block;
   object-fit: contain;
   background: none;
