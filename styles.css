@@ -1807,7 +1807,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
 
 .opportunities__card {
   position: relative;
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 2.2rem 2rem 2.4rem;
@@ -1836,7 +1836,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 400;
-  color: #14182f;
+  color: var(--white);
   line-height: 1.4;
   margin-bottom: 1.5rem;
 }
@@ -1854,7 +1854,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
   flex-direction: column;
   gap: 0.2rem;
   padding-bottom: 0.85rem;
-  border-bottom: 1px solid rgba(20, 24, 47, 0.12);
+  border-bottom: 1px solid var(--border);
 }
 
 .opportunities__meta li:last-child {
@@ -1867,12 +1867,12 @@ button  { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(20, 24, 47, 0.5);
+  color: var(--white-45);
 }
 
 .opportunities__meta-value {
   font-size: var(--text-small);
-  color: rgba(20, 24, 47, 0.85);
+  color: var(--white-70);
   line-height: 1.5;
 }
 
@@ -1882,16 +1882,16 @@ button  { cursor: pointer; font-family: var(--font-body); }
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #14182f;
-  border: 1px solid #14182f;
+  color: var(--gold-light);
+  border: 1px solid var(--gold-light);
   border-radius: 4px;
   padding: 0.7rem 1.4rem;
   transition: background var(--dur-mid), color var(--dur-mid);
 }
 
 .opportunities__cta:hover {
-  background: #14182f;
-  color: #ffffff;
+  background: var(--gold-light);
+  color: #09000a;
 }
 
 @media (max-width: 900px) {
