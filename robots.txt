@@ -1,21 +1,11 @@
 User-agent: *
 Allow: /
-Disallow: /assets/images/logo-source.png
-Disallow: /.env
-Disallow: /credentials.json
 
-# Sitemaps
 Sitemap: https://xvestora.com/sitemap.xml
 
-# Crawl-delay pour éviter la surcharge
-Crawl-delay: 1
-
-# Google
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
-# Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
