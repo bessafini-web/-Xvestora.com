@@ -119,15 +119,16 @@ if (burger && mobileMenu) {
   var raf;
 
   function activateSlide(idx) {
+    // disabled: 4 hero videos replaced by hero-mix.mp4
     slides.forEach(function (s, i) {
       var vid = s.querySelector('video');
       if (i === idx) {
         s.classList.add('active');
-        if (vid) { vid.currentTime = 0; vid.play().catch(function () {}); }
+        // if (vid) { vid.currentTime = 0; vid.play().catch(function () {}); }
         if (labelEl) labelEl.textContent = s.dataset.label || '';
       } else {
         s.classList.remove('active');
-        if (vid) vid.pause();
+        // if (vid) vid.pause();
       }
     });
   }
