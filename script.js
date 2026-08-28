@@ -114,7 +114,7 @@ if (burger && mobileMenu) {
   var labelEl  = document.getElementById('slideLabel');
   var fillEl   = document.getElementById('heroProgress');
   var current  = 0;
-  var duration = 7000;
+  var duration = 4500;
   var startTime;
   var raf;
 
