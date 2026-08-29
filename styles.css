@@ -2088,3 +2088,15 @@ button  { cursor: pointer; font-family: var(--font-body); }
   /* Espace en bas du body pour ne pas masquer le contenu */
   body { padding-bottom: 72px; }
 }
+
+/* ─────────────────────────────────────────
+   CLOSING CTA (C13)
+───────────────────────────────────────── */
+.closing-cta {
+  background: linear-gradient(180deg, var(--bg-3), var(--bg));
+  border-top: 1px solid var(--border-gold);
+  padding: 100px 0;
+  text-align: center;
+}
+.closing-cta .section-label { justify-content: center; }
+.closing-cta .section-headline { max-width: 720px; margin-left: auto; margin-right: auto; }
