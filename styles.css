@@ -2100,3 +2100,13 @@ button  { cursor: pointer; font-family: var(--font-body); }
 }
 .closing-cta .section-label { justify-content: center; }
 .closing-cta .section-headline { max-width: 720px; margin-left: auto; margin-right: auto; }
+
+/* ─────────────────────────────────────────
+   ADVISOR FLOATING GATE (D)
+───────────────────────────────────────── */
+.advisor-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; }
+.advisor-backdrop { position: fixed; inset: 0; background: rgba(10,14,39,.75); z-index: 950; display: none; align-items: center; justify-content: center; padding: 20px; overflow-y: auto; }
+.advisor-backdrop.open { display: flex; }
+.advisor-panel { max-width: 560px; width: 100%; margin: auto; max-height: 90vh; overflow-y: auto; position: relative; background: var(--bg-2); border: 1px solid var(--border); padding: 2.5rem; }
+.advisor-close { position: absolute; top: 1rem; right: 1rem; padding: .4rem .9rem; }
+@media (max-width: 768px) { .advisor-float { bottom: 90px; right: 16px; } }

@@ -324,6 +324,16 @@
   </div>
 </section>
 
+<!-- COVERAGE -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-label reveal">Coverage</div>
+    <h2 class="section-headline reveal">Before the process, the brief.</h2>
+    <p class="section-intro reveal">Nothing on this site is a listing, and that is deliberate. The process begins when you describe what you are trying to acquire; coverage across five regions and five sectors is then read against it. Everything that follows — sourcing, structuring, title, signature — starts from that one message.</p>
+    <button type="button" class="btn btn--primary js-advisor-open">Speak to an advisor</button>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <div class="cta-band">
   <div class="container">
@@ -384,7 +394,6 @@
           <li><a href="mailto:contact@xvestora.com">Email</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
-          <li><button type="button" class="btn btn--primary js-advisor-open">Speak to an advisor</button></li>
         </ul>
       </div>
     </div>
@@ -398,9 +407,12 @@
   </div>
 </footer>
 
-<!-- ADVISOR CAPTURE GATE -->
-<section class="section-pad" id="advisorGate" hidden>
-  <div class="container">
+<!-- ADVISOR FLOATING GATE -->
+<button type="button" class="btn btn--primary advisor-float js-advisor-open" aria-label="Speak to an advisor">Speak to an advisor</button>
+
+<div class="advisor-backdrop" id="advisorBackdrop">
+  <div class="advisor-panel">
+    <button type="button" class="btn btn--ghost advisor-close js-advisor-close" aria-label="Close">Close</button>
     <div class="section-label reveal">Private Access</div>
     <h2 class="section-headline reveal">Speak to <em>an Advisor</em></h2>
     <p class="section-intro reveal">Share a few details and we will prepare your file.</p>
@@ -426,13 +438,12 @@
       <button type="submit" class="btn btn--primary btn--full">Submit</button>
       <p class="section-intro">Your details are used to prepare your file. Nothing is shared with third parties.</p>
     </form>
-    <div class="card" id="advisorSuccess" hidden>
+    <div class="card" id="advisorSuccess" hidden data-wa-label="Continue on WhatsApp">
       <h3 class="section-headline">Thank You</h3>
       <p class="section-intro">Your details have been received. You may also continue the conversation directly.</p>
-      <a href="https://wa.me/212661185045" target="_blank" rel="noopener" class="btn btn--ghost">Continue on WhatsApp</a>
     </div>
   </div>
-</section>
+</div>
 
 <script>
   // Nav scroll
@@ -449,8 +460,10 @@
   const ro = new IntersectionObserver(entries=>{ entries.forEach((e,i)=>{ if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60); ro.unobserve(e.target);} }); },{threshold:.08,rootMargin:'0px 0px -20px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-  const advisorGate=document.getElementById('advisorGate');
-  document.querySelectorAll('.js-advisor-open').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorGate.removeAttribute('hidden');advisorGate.scrollIntoView({behavior:'smooth'});}));
+  const advisorBackdrop=document.getElementById('advisorBackdrop');
+  document.querySelectorAll('.js-advisor-open').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorBackdrop.classList.add('open');}));
+  document.querySelectorAll('.js-advisor-close').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorBackdrop.classList.remove('open');}));
+  advisorBackdrop.addEventListener('click',e=>{ if(e.target===advisorBackdrop) advisorBackdrop.classList.remove('open'); });
   const advisorForm=document.getElementById('advisorForm'),advisorSuccess=document.getElementById('advisorSuccess');
   if(advisorForm){
     advisorForm.addEventListener('submit',e=>{
@@ -458,7 +471,18 @@
       const abtn=advisorForm.querySelector('button[type="submit"]');
       abtn.disabled=true;
       fetch(advisorForm.action,{method:'POST',body:new FormData(advisorForm),headers:{'Accept':'application/json'}})
-        .then(r=>{ if(r.ok){ advisorForm.hidden=true; advisorSuccess.removeAttribute('hidden'); } else { abtn.disabled=false; } })
+        .then(r=>{
+          if(r.ok){
+            advisorForm.hidden=true;
+            advisorSuccess.removeAttribute('hidden');
+            const a=document.createElement('a');
+            a.href='https://wa.me/212661185045';
+            a.target='_blank'; a.rel='noopener';
+            a.className='btn btn--ghost';
+            a.textContent=advisorSuccess.getAttribute('data-wa-label');
+            advisorSuccess.appendChild(a);
+          } else { abtn.disabled=false; }
+        })
         .catch(()=>{ abtn.disabled=false; });
     });
   }

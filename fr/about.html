@@ -341,6 +341,16 @@
   </div>
 </section>
 
+<!-- COVERAGE -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-label reveal">Couverture</div>
+    <h2 class="section-headline reveal">Ce que nous couvrons, nous le couvrons discrètement.</h2>
+    <p class="section-intro reveal">Sur cinq régions et cinq secteurs, notre couverture est continue plutôt que publiée. Les propriétaires viennent à nous précisément parce que rien n'est diffusé. Dites-nous ce que vous cherchez et nous vous dirons si cela existe — et si ce n'est pas encore le cas, à quelle échéance c'est probable.</p>
+    <button type="button" class="btn btn--primary js-advisor-open">Parler à un conseiller</button>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <div class="cta-band">
   <div class="container">
@@ -361,15 +371,18 @@
       <div class="footer__col"><h4>Navigation</h4><ul><li><a href="/fr/">Accueil</a></li><li><a href="processus.html">Processus</a></li><li><a href="secteurs.html">Secteurs</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">À Propos</a></li></ul></div>
       <div class="footer__col"><h4>Secteurs</h4><ul><li><a href="secteurs.html#immobilier">Immobilier</a></li><li><a href="secteurs.html#industrie">Industrie</a></li><li><a href="secteurs.html#agriculture">Agriculture</a></li><li><a href="secteurs.html#tourisme">Tourisme</a></li><li><a href="secteurs.html#energie">Énergie</a></li></ul></div>
       <div class="footer__col"><h4>Services</h4><ul><li><a href="services.html#off-market">Hors-Marché</a></li><li><a href="services.html#conseil">Conseil Stratégique</a></li><li><a href="services.html#cle-en-main">Clé en Main</a></li><li><a href="services.html#reseau">Réseau Privé</a></li></ul></div>
-      <div class="footer__col"><h4>Contact</h4><ul><li><a href="contact.html">Soumettre un Brief</a></li><li><a href="https://wa.me/212661185045">WhatsApp</a></li><li><a href="mailto:contact@xvestora.com">Email</a></li><li><a href="privacy.html">Confidentialité</a></li><li><button type="button" class="btn btn--primary js-advisor-open">Parler à un conseiller</button></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><ul><li><a href="contact.html">Soumettre un Brief</a></li><li><a href="https://wa.me/212661185045">WhatsApp</a></li><li><a href="mailto:contact@xvestora.com">Email</a></li><li><a href="privacy.html">Confidentialité</a></li></ul></div>
     </div>
     <div class="footer__bottom"><p class="footer__copy">© 2026 Xvestora. All rights reserved.</p><div class="footer__legal"><a href="privacy.html">Politique de Confidentialité</a><a href="terms.html">CGU</a></div></div>
   </div>
 </footer>
 
-<!-- ADVISOR CAPTURE GATE -->
-<section class="section-pad" id="advisorGate" hidden>
-  <div class="container">
+<!-- ADVISOR FLOATING GATE -->
+<button type="button" class="btn btn--primary advisor-float js-advisor-open" aria-label="Parler à un conseiller">Parler à un conseiller</button>
+
+<div class="advisor-backdrop" id="advisorBackdrop">
+  <div class="advisor-panel">
+    <button type="button" class="btn btn--ghost advisor-close js-advisor-close" aria-label="Fermer">Fermer</button>
     <div class="section-label reveal">Accès Privé</div>
     <h2 class="section-headline reveal">Parler à <em>un Conseiller</em></h2>
     <p class="section-intro reveal">Partagez quelques informations, nous préparerons votre dossier.</p>
@@ -395,13 +408,12 @@
       <button type="submit" class="btn btn--primary btn--full">Envoyer</button>
       <p class="section-intro">Vos informations servent à préparer votre dossier. Rien n'est transmis à des tiers.</p>
     </form>
-    <div class="card" id="advisorSuccess" hidden>
+    <div class="card" id="advisorSuccess" hidden data-wa-label="Continuer sur WhatsApp">
       <h3 class="section-headline">Merci</h3>
       <p class="section-intro">Vos informations ont été reçues. Vous pouvez également poursuivre la conversation directement.</p>
-      <a href="https://wa.me/212661185045" target="_blank" rel="noopener" class="btn btn--ghost">Continuer sur WhatsApp</a>
     </div>
   </div>
-</section>
+</div>
 
 <script>
   const nav=document.getElementById('nav'); window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>20);},{passive:true});
@@ -413,8 +425,10 @@
   const ro=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);ro.unobserve(e.target);}});},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-  const advisorGate=document.getElementById('advisorGate');
-  document.querySelectorAll('.js-advisor-open').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorGate.removeAttribute('hidden');advisorGate.scrollIntoView({behavior:'smooth'});}));
+  const advisorBackdrop=document.getElementById('advisorBackdrop');
+  document.querySelectorAll('.js-advisor-open').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorBackdrop.classList.add('open');}));
+  document.querySelectorAll('.js-advisor-close').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorBackdrop.classList.remove('open');}));
+  advisorBackdrop.addEventListener('click',e=>{ if(e.target===advisorBackdrop) advisorBackdrop.classList.remove('open'); });
   const advisorForm=document.getElementById('advisorForm'),advisorSuccess=document.getElementById('advisorSuccess');
   if(advisorForm){
     advisorForm.addEventListener('submit',e=>{
@@ -422,7 +436,18 @@
       const btn=advisorForm.querySelector('button[type="submit"]');
       btn.disabled=true;
       fetch(advisorForm.action,{method:'POST',body:new FormData(advisorForm),headers:{'Accept':'application/json'}})
-        .then(r=>{ if(r.ok){ advisorForm.hidden=true; advisorSuccess.removeAttribute('hidden'); } else { btn.disabled=false; } })
+        .then(r=>{
+          if(r.ok){
+            advisorForm.hidden=true;
+            advisorSuccess.removeAttribute('hidden');
+            const a=document.createElement('a');
+            a.href='https://wa.me/212661185045';
+            a.target='_blank'; a.rel='noopener';
+            a.className='btn btn--ghost';
+            a.textContent=advisorSuccess.getAttribute('data-wa-label');
+            advisorSuccess.appendChild(a);
+          } else { btn.disabled=false; }
+        })
         .catch(()=>{ btn.disabled=false; });
     });
   }

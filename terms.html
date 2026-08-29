@@ -321,6 +321,14 @@ a{text-decoration:none;color:inherit}
 .wa-float svg{width:18px;height:18px;fill:white}
 @keyframes floatUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
+/* ADVISOR FLOATING GATE (D) */
+.advisor-float{position:fixed;bottom:28px;right:28px;z-index:900;width:auto}
+.advisor-backdrop{position:fixed;inset:0;background:rgba(8,11,18,.75);z-index:950;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
+.advisor-backdrop.open{display:flex}
+.advisor-panel{max-width:480px;width:100%;margin:auto;max-height:90vh;overflow-y:auto;position:relative}
+.advisor-close{position:absolute;top:16px;right:16px;background:none;color:rgba(255,255,255,.5);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:6px 10px}
+@media (max-width:768px){.advisor-float{bottom:90px;right:16px}}
+
 /* FOOTER */
 .footer{background:#050709;border-top:1px solid rgba(168,123,69,0.12);padding:60px 8% 28px}
 .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
@@ -546,5 +554,77 @@ a{text-decoration:none;color:inherit}
       <a href="/">Home</a>
     </div>
   </footer>
+
+  <!-- ADVISOR FLOATING GATE -->
+  <button type="button" class="form-submit advisor-float js-advisor-open" aria-label="Speak to an advisor">Speak to an advisor</button>
+
+  <div class="advisor-backdrop" id="advisorBackdrop">
+    <div class="advisor-panel form-card">
+      <button type="button" class="advisor-close js-advisor-close" aria-label="Close">Close</button>
+      <h3>Speak to an Advisor</h3>
+      <p class="sub">Share a few details and we will prepare your file.</p>
+      <form id="advisorForm" action="https://formspree.io/f/4df1af20-1d44-46f3-80e4-8af031627074" method="POST">
+        <div class="frow full"><div class="field"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" /></div></div>
+        <div class="frow full"><div class="field"><label>Email Address</label><input type="email" name="email" placeholder="Your email address" required /></div></div>
+        <div class="frow">
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="+212 6xx xxx xxx" /></div>
+          <div class="field"><label>City of Interest</label><input type="text" name="city" placeholder="e.g. Tangier" /></div>
+        </div>
+        <div class="frow">
+          <div class="field">
+            <label>Sector</label>
+            <select name="sector">
+              <option value="" disabled selected>Select a sector (optional)</option>
+              <option>Real Estate</option><option>Industry</option><option>Agriculture</option><option>Tourism</option><option>Energy</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Budget Range</label>
+            <select name="budget">
+              <option value="" disabled selected>Select a range (optional)</option>
+              <option>&lt; 500K USD</option><option>500K – 1M USD</option><option>1M – 5M USD</option><option>5M USD+</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">Submit</button>
+        <p class="form-note">Your details are used to prepare your file. Nothing is shared with third parties.</p>
+      </form>
+      <div id="advisorSuccess" hidden data-wa-label="Continue on WhatsApp">
+        <h3>Thank You</h3>
+        <p class="sub">Your details have been received. You may also continue the conversation directly.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var advisorBackdrop = document.getElementById('advisorBackdrop');
+    document.querySelectorAll('.js-advisor-open').forEach(function(btn){ btn.addEventListener('click', function(e){ e.preventDefault(); advisorBackdrop.classList.add('open'); }); });
+    document.querySelectorAll('.js-advisor-close').forEach(function(btn){ btn.addEventListener('click', function(e){ e.preventDefault(); advisorBackdrop.classList.remove('open'); }); });
+    advisorBackdrop.addEventListener('click', function(e){ if (e.target === advisorBackdrop) advisorBackdrop.classList.remove('open'); });
+    var advisorForm = document.getElementById('advisorForm');
+    var advisorSuccess = document.getElementById('advisorSuccess');
+    if (advisorForm) {
+      advisorForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        var btn = advisorForm.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        fetch(advisorForm.action, { method: 'POST', body: new FormData(advisorForm), headers: { 'Accept': 'application/json' } })
+          .then(function(r){
+            if (r.ok) {
+              advisorForm.hidden = true;
+              advisorSuccess.removeAttribute('hidden');
+              var a = document.createElement('a');
+              a.href = 'https://wa.me/212661185045';
+              a.target = '_blank'; a.rel = 'noopener';
+              a.className = 'form-submit';
+              a.style.display = 'inline-block';
+              a.textContent = advisorSuccess.getAttribute('data-wa-label');
+              advisorSuccess.appendChild(a);
+            } else { btn.disabled = false; }
+          })
+          .catch(function(){ btn.disabled = false; });
+      });
+    }
+  </script>
 </body>
 </html>
