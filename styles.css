@@ -1966,69 +1966,6 @@ button  { cursor: pointer; font-family: var(--font-body); }
 }
 
 /* ─────────────────────────────────────────
-   WHATSAPP FLOATING BUTTON
-───────────────────────────────────────── */
-.wa-float {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 900;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: #25D366;
-  color: #fff;
-  border-radius: 50px;
-  padding: 0 1.2rem 0 0;
-  height: 52px;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.40);
-  text-decoration: none;
-  overflow: hidden;
-  transition: box-shadow 0.25s, transform 0.25s;
-  animation: waEntry 0.6s var(--ease-out) 2s both;
-}
-
-@keyframes waEntry {
-  from { transform: scale(0.6) translateY(20px); opacity: 0; }
-  to   { transform: scale(1)   translateY(0);    opacity: 1; }
-}
-
-.wa-float:hover {
-  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
-  transform: translateY(-2px);
-}
-
-.wa-float__icon {
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  padding: 14px;
-}
-
-.wa-float__label {
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-  padding-right: 0.2rem;
-}
-
-/* Sur mobile — masqué si sticky CTA visible */
-@media (max-width: 768px) {
-  .wa-float {
-    bottom: 90px; /* au-dessus du sticky CTA */
-    right: 16px;
-    height: 48px;
-    padding: 0;
-    width: 48px;
-    border-radius: 50%;
-    justify-content: center;
-  }
-  .wa-float__icon { width: 48px; height: 48px; padding: 12px; }
-  .wa-float__label { display: none; }
-}
-
-/* ─────────────────────────────────────────
    STICKY MOBILE CTA
 ───────────────────────────────────────── */
 .mobile-cta {
@@ -2069,22 +2006,30 @@ button  { cursor: pointer; font-family: var(--font-body); }
 
 .mobile-cta__btn:hover { background: var(--gold-hover); color: var(--bg); }
 
-.mobile-cta__wa {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  background: #25D366;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-
-.mobile-cta__wa svg { width: 24px; height: 24px; }
-
 @media (max-width: 768px) {
   .mobile-cta { display: flex; }
   /* Espace en bas du body pour ne pas masquer le contenu */
   body { padding-bottom: 72px; }
 }
+
+/* ─────────────────────────────────────────
+   CLOSING CTA (C13)
+───────────────────────────────────────── */
+.closing-cta {
+  background: linear-gradient(180deg, var(--bg-3), var(--bg));
+  border-top: 1px solid var(--border-gold);
+  padding: 100px 0;
+  text-align: center;
+}
+.closing-cta .section-label { justify-content: center; }
+.closing-cta .section-headline { max-width: 720px; margin-left: auto; margin-right: auto; }
+
+/* ─────────────────────────────────────────
+   ADVISOR FLOATING GATE (D)
+───────────────────────────────────────── */
+.advisor-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; }
+.advisor-backdrop { position: fixed; inset: 0; background: rgba(10,14,39,.75); z-index: 950; display: none; align-items: center; justify-content: center; padding: 20px; overflow-y: auto; }
+.advisor-backdrop.open { display: flex; }
+.advisor-panel { max-width: 560px; width: 100%; margin: auto; max-height: 90vh; overflow-y: auto; position: relative; background: var(--bg-2); border: 1px solid var(--border); padding: 2.5rem; }
+.advisor-close { position: absolute; top: 1rem; right: 1rem; padding: .4rem .9rem; }
+@media (max-width: 768px) { .advisor-float { bottom: 90px; right: 16px; } }

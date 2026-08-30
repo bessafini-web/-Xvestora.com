@@ -400,28 +400,14 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ─── WHATSAPP FLOAT ──────────────────────────────── */
-.wa-float {
-  position: fixed;
-  bottom: 28px; right: 28px;
-  z-index: 900;
-  display: flex;
-  align-items: center;
-  gap: .6rem;
-  background: #25D366;
-  color: #fff;
-  border-radius: 50px;
-  padding: 0 1.2rem 0 0;
-  height: 52px;
-  box-shadow: 0 4px 20px rgba(37,211,102,.38);
-  overflow: hidden;
-  transition: box-shadow .25s, transform .25s;
-  animation: waIn .6s var(--ease) 2s both;
-}
-@keyframes waIn { from { transform: scale(.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-.wa-float:hover { box-shadow: 0 6px 28px rgba(37,211,102,.52); transform: translateY(-2px); }
-.wa-float__icon { flex-shrink: 0; width: 52px; height: 52px; padding: 13px; }
-.wa-float__label { font-size: .8rem; font-weight: 600; white-space: nowrap; padding-right: .2rem; }
+
+/* ─── ADVISOR FLOATING GATE (D) ──────────────────── */
+.advisor-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; }
+.advisor-backdrop { position: fixed; inset: 0; background: rgba(18,25,42,.75); z-index: 950; display: none; align-items: center; justify-content: center; padding: 20px; overflow-y: auto; }
+.advisor-backdrop.open { display: flex; }
+.advisor-panel { max-width: 560px; width: 100%; margin: auto; max-height: 90vh; overflow-y: auto; position: relative; background: var(--void-card); border: 1px solid var(--border-mid); padding: 2.2rem; }
+.advisor-close { position: absolute; top: 1rem; right: 1rem; padding: .4rem .9rem; }
+@media (max-width: 768px) { .advisor-float { bottom: 90px; right: 16px; } }
 
 /* ─── FOOTER ──────────────────────────────────────── */
 .footer {
@@ -508,7 +494,4 @@ button { cursor: pointer; font-family: var(--font-body); }
 }
 @media (max-width: 560px) {
   .footer__grid { grid-template-columns: 1fr; }
-  .wa-float { right: 14px; bottom: 14px; padding: 0; width: 48px; height: 48px; border-radius: 50%; justify-content: center; }
-  .wa-float__icon { width: 48px; height: 48px; padding: 12px; }
-  .wa-float__label { display: none; }
 }

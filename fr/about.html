@@ -38,7 +38,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="/pages.css" />
+  <link rel="preload" as="image" href="/assets/images/heroes/about-960.avif" type="image/avif" media="(max-width: 768px)" />
+  <link rel="preload" as="image" href="/assets/images/heroes/about-1440.avif" type="image/avif" media="(min-width: 769px) and (max-width: 1599px)" />
+  <link rel="preload" as="image" href="/assets/images/heroes/about-1920.avif" type="image/avif" media="(min-width: 1600px)" />
   <style>
+    #pageHero {
+      background-image: url("/assets/images/heroes/about-1440.jpg");
+      background-image: image-set(url("/assets/images/heroes/about-1440.avif") type("image/avif"), url("/assets/images/heroes/about-1440.webp") type("image/webp"), url("/assets/images/heroes/about-1440.jpg") type("image/jpeg"));
+      background-image: -webkit-image-set(url("/assets/images/heroes/about-1440.avif") type("image/avif"), url("/assets/images/heroes/about-1440.webp") type("image/webp"), url("/assets/images/heroes/about-1440.jpg") type("image/jpeg"));
+    }
+    @media (max-width: 768px) {
+      #pageHero {
+        background-image: url("/assets/images/heroes/about-960.jpg");
+        background-image: image-set(url("/assets/images/heroes/about-960.avif") type("image/avif"), url("/assets/images/heroes/about-960.webp") type("image/webp"), url("/assets/images/heroes/about-960.jpg") type("image/jpeg"));
+        background-image: -webkit-image-set(url("/assets/images/heroes/about-960.avif") type("image/avif"), url("/assets/images/heroes/about-960.webp") type("image/webp"), url("/assets/images/heroes/about-960.jpg") type("image/jpeg"));
+      }
+    }
+    @media (min-width: 1600px) {
+      #pageHero {
+        background-image: url("/assets/images/heroes/about-1920.jpg");
+        background-image: image-set(url("/assets/images/heroes/about-1920.avif") type("image/avif"), url("/assets/images/heroes/about-1920.webp") type("image/webp"), url("/assets/images/heroes/about-1920.jpg") type("image/jpeg"));
+        background-image: -webkit-image-set(url("/assets/images/heroes/about-1920.avif") type("image/avif"), url("/assets/images/heroes/about-1920.webp") type("image/webp"), url("/assets/images/heroes/about-1920.jpg") type("image/jpeg"));
+      }
+    }
     .mission-quote {
       padding: 80px 0;
       background: var(--void-mid);
@@ -149,17 +171,19 @@
 <!-- TICKER -->
 <div class="ticker">
   <div class="ticker__track">
-    <span class="ticker__item"><span class="ticker__label">IDE Maroc</span><span class="ticker__value ticker__value--up">+34% 2023</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Croissance du PIB</span><span class="ticker__value ticker__value--up">4,9% · 2025</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">IDE Maroc</span><span class="ticker__value ticker__value--up">56,1 Md MAD · 2025</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Terrain Agri · Souss-Massa</span><span class="ticker__value ticker__value--up">Forte Demande</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">Tourisme Maroc</span><span class="ticker__value ticker__value--up">14,5M visiteurs</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Arrivées Touristiques</span><span class="ticker__value ticker__value--up">19,8M · 2025</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Inflation</span><span class="ticker__value ticker__value--up">0,8% · 2025</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Coupe du Monde 2030</span><span class="ticker__value ticker__value--gold">Co-organisateur</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">Immobilier Marrakech</span><span class="ticker__value ticker__value--up">+18% / an</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Zone Industrielle · Tanger</span><span class="ticker__value ticker__value--up">Expansion Active</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">IDE Maroc</span><span class="ticker__value ticker__value--up">+34% 2023</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Croissance du PIB</span><span class="ticker__value ticker__value--up">4,9% · 2025</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">IDE Maroc</span><span class="ticker__value ticker__value--up">56,1 Md MAD · 2025</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Terrain Agri · Souss-Massa</span><span class="ticker__value ticker__value--up">Forte Demande</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">Tourisme Maroc</span><span class="ticker__value ticker__value--up">14,5M visiteurs</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Arrivées Touristiques</span><span class="ticker__value ticker__value--up">19,8M · 2025</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Inflation</span><span class="ticker__value ticker__value--up">0,8% · 2025</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Coupe du Monde 2030</span><span class="ticker__value ticker__value--gold">Co-organisateur</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">Immobilier Marrakech</span><span class="ticker__value ticker__value--up">+18% / an</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Zone Industrielle · Tanger</span><span class="ticker__value ticker__value--up">Expansion Active</span></span><span class="ticker__sep">◆</span>
   </div>
 </div>
@@ -198,7 +222,7 @@
 </nav>
 
 <!-- PAGE HERO -->
-<header class="page-hero page-hero--photo" style="background-image:url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1800&amp;q=85')">
+<header class="page-hero page-hero--photo" id="pageHero">
   <div class="container">
     <div class="breadcrumb"><a href="/fr/">Accueil</a><span class="breadcrumb__sep">/</span><span>À Propos</span></div>
     <p class="page-hero__label">Notre Cabinet</p>
@@ -309,7 +333,7 @@
       <div class="std-item reveal">
         <div class="std-item__num">Standard 05</div>
         <div class="std-item__title">Transparence sur les honoraires</div>
-        <div class="std-item__desc">Nos conditions de rémunération sont discutées et clarifiées avant tout engagement. Aucun frais caché, aucune surprise à la signature. La transparence est non-négociable.</div>
+        <div class="std-item__desc">Nos honoraires varient selon le service et la complexité de l'opération. Ils sont convenus entre les parties, dans le cadre du droit marocain et des règles du commerce international, et les modalités sont établies et acceptées avant tout engagement.</div>
       </div>
     </div>
   </div>
@@ -339,6 +363,16 @@
   </div>
 </section>
 
+<!-- COVERAGE -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-label reveal">Couverture</div>
+    <h2 class="section-headline reveal">Ce que nous couvrons, nous le couvrons discrètement.</h2>
+    <p class="section-intro reveal">Sur cinq régions et cinq secteurs, notre couverture est continue plutôt que publiée. Les propriétaires viennent à nous précisément parce que rien n'est diffusé. Dites-nous ce que vous cherchez et nous vous dirons si cela existe — et si ce n'est pas encore le cas, à quelle échéance c'est probable.</p>
+    <button type="button" class="btn btn--primary js-advisor-open">Parler à un conseiller</button>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <div class="cta-band">
   <div class="container">
@@ -359,16 +393,49 @@
       <div class="footer__col"><h4>Navigation</h4><ul><li><a href="/fr/">Accueil</a></li><li><a href="processus.html">Processus</a></li><li><a href="secteurs.html">Secteurs</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">À Propos</a></li></ul></div>
       <div class="footer__col"><h4>Secteurs</h4><ul><li><a href="secteurs.html#immobilier">Immobilier</a></li><li><a href="secteurs.html#industrie">Industrie</a></li><li><a href="secteurs.html#agriculture">Agriculture</a></li><li><a href="secteurs.html#tourisme">Tourisme</a></li><li><a href="secteurs.html#energie">Énergie</a></li></ul></div>
       <div class="footer__col"><h4>Services</h4><ul><li><a href="services.html#off-market">Hors-Marché</a></li><li><a href="services.html#conseil">Conseil Stratégique</a></li><li><a href="services.html#cle-en-main">Clé en Main</a></li><li><a href="services.html#reseau">Réseau Privé</a></li></ul></div>
-      <div class="footer__col"><h4>Contact</h4><ul><li><a href="contact.html">Soumettre un Brief</a></li><li><a href="https://wa.me/212661185045">WhatsApp</a></li><li><a href="mailto:contact@xvestora.com">Email</a></li><li><a href="privacy.html">Confidentialité</a></li></ul></div>
+      <div class="footer__col"><h4>Contact</h4><ul><li><a href="contact.html">Soumettre un Brief</a></li><li><a href="mailto:contact@xvestora.com">Email</a></li><li><a href="privacy.html">Confidentialité</a></li></ul></div>
     </div>
     <div class="footer__bottom"><p class="footer__copy">© 2026 Xvestora. All rights reserved.</p><div class="footer__legal"><a href="privacy.html">Politique de Confidentialité</a><a href="terms.html">CGU</a></div></div>
   </div>
 </footer>
 
-<a href="https://wa.me/212661185045?text=Bonjour%20Xvestora%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20votre%20cabinet." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg class="wa-float__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L0 24l6.335-1.507A11.933 11.933 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.376l-.36-.213-3.728.887.928-3.618-.234-.373A9.818 9.818 0 1 1 12 21.818z"/></svg>
-  <span class="wa-float__label">WhatsApp</span>
-</a>
+<!-- ADVISOR FLOATING GATE -->
+<button type="button" class="btn btn--primary advisor-float js-advisor-open" aria-label="Parler à un conseiller">Parler à un conseiller</button>
+
+<div class="advisor-backdrop" id="advisorBackdrop">
+  <div class="advisor-panel">
+    <button type="button" class="btn btn--ghost advisor-close js-advisor-close" aria-label="Fermer">Fermer</button>
+    <div class="section-label reveal">Accès Privé</div>
+    <h2 class="section-headline reveal">Parler à <em>un Conseiller</em></h2>
+    <p class="section-intro reveal">Partagez quelques informations, nous préparerons votre dossier.</p>
+    <form id="advisorForm" action="https://formspree.io/f/4df1af20-1d44-46f3-80e4-8af031627074" method="POST">
+      <div class="field"><label>Nom complet</label><input type="text" name="name" placeholder="Votre nom complet" /></div>
+      <div class="field"><label>Adresse e-mail</label><input type="email" name="email" placeholder="Votre adresse e-mail" required /></div>
+      <div class="field"><label>Téléphone</label><input type="tel" name="phone" placeholder="+212 6xx xxx xxx" /></div>
+      <div class="field"><label>Ville d'intérêt</label><input type="text" name="city" placeholder="ex. Tanger" /></div>
+      <div class="field">
+        <label>Secteur</label>
+        <select name="sector">
+          <option value="" disabled selected>Sélectionnez un secteur (optionnel)</option>
+          <option>Immobilier</option><option>Industrie</option><option>Agriculture</option><option>Tourisme</option><option>Énergie</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Budget</label>
+        <select name="budget">
+          <option value="" disabled selected>Sélectionnez une fourchette (optionnel)</option>
+          <option>&lt; 500K USD</option><option>500K – 1M USD</option><option>1M – 5M USD</option><option>5M USD+</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Envoyer</button>
+      <p class="section-intro">Vos informations servent à préparer votre dossier. Rien n'est transmis à des tiers.</p>
+    </form>
+    <div class="card" id="advisorSuccess" hidden data-wa-label="Continuer sur WhatsApp">
+      <h3 class="section-headline">Merci</h3>
+      <p class="section-intro">Vos informations ont été reçues. Vous pouvez également poursuivre la conversation directement.</p>
+    </div>
+  </div>
+</div>
 
 <script>
   const nav=document.getElementById('nav'); window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>20);},{passive:true});
@@ -379,6 +446,33 @@
   document.querySelectorAll('.nav__links a,.nav__mobile a').forEach(a=>{if(a.getAttribute('href')===page)a.classList.add('active');});
   const ro=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60);ro.unobserve(e.target);}});},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+  const advisorBackdrop=document.getElementById('advisorBackdrop');
+  document.querySelectorAll('.js-advisor-open').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorBackdrop.classList.add('open');}));
+  document.querySelectorAll('.js-advisor-close').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorBackdrop.classList.remove('open');}));
+  advisorBackdrop.addEventListener('click',e=>{ if(e.target===advisorBackdrop) advisorBackdrop.classList.remove('open'); });
+  const advisorForm=document.getElementById('advisorForm'),advisorSuccess=document.getElementById('advisorSuccess');
+  if(advisorForm){
+    advisorForm.addEventListener('submit',e=>{
+      e.preventDefault();
+      const btn=advisorForm.querySelector('button[type="submit"]');
+      btn.disabled=true;
+      fetch(advisorForm.action,{method:'POST',body:new FormData(advisorForm),headers:{'Accept':'application/json'}})
+        .then(r=>{
+          if(r.ok){
+            advisorForm.hidden=true;
+            advisorSuccess.removeAttribute('hidden');
+            const a=document.createElement('a');
+            a.href='https://wa.me/212661185045';
+            a.target='_blank'; a.rel='noopener';
+            a.className='btn btn--ghost';
+            a.textContent=advisorSuccess.getAttribute('data-wa-label');
+            advisorSuccess.appendChild(a);
+          } else { btn.disabled=false; }
+        })
+        .catch(()=>{ btn.disabled=false; });
+    });
+  }
 </script>
 </body>
 </html>

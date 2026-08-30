@@ -38,7 +38,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="pages.css" />
+  <link rel="preload" as="image" href="/assets/images/heroes/shared-hero-960.avif" type="image/avif" media="(max-width: 768px)" />
+  <link rel="preload" as="image" href="/assets/images/heroes/shared-hero-1440.avif" type="image/avif" media="(min-width: 769px) and (max-width: 1599px)" />
+  <link rel="preload" as="image" href="/assets/images/heroes/shared-hero-1920.avif" type="image/avif" media="(min-width: 1600px)" />
   <style>
+    #pageHero {
+      background-image: url("/assets/images/heroes/shared-hero-1440.jpg");
+      background-image: image-set(url("/assets/images/heroes/shared-hero-1440.avif") type("image/avif"), url("/assets/images/heroes/shared-hero-1440.webp") type("image/webp"), url("/assets/images/heroes/shared-hero-1440.jpg") type("image/jpeg"));
+      background-image: -webkit-image-set(url("/assets/images/heroes/shared-hero-1440.avif") type("image/avif"), url("/assets/images/heroes/shared-hero-1440.webp") type("image/webp"), url("/assets/images/heroes/shared-hero-1440.jpg") type("image/jpeg"));
+    }
+    @media (max-width: 768px) {
+      #pageHero {
+        background-image: url("/assets/images/heroes/shared-hero-960.jpg");
+        background-image: image-set(url("/assets/images/heroes/shared-hero-960.avif") type("image/avif"), url("/assets/images/heroes/shared-hero-960.webp") type("image/webp"), url("/assets/images/heroes/shared-hero-960.jpg") type("image/jpeg"));
+        background-image: -webkit-image-set(url("/assets/images/heroes/shared-hero-960.avif") type("image/avif"), url("/assets/images/heroes/shared-hero-960.webp") type("image/webp"), url("/assets/images/heroes/shared-hero-960.jpg") type("image/jpeg"));
+      }
+    }
+    @media (min-width: 1600px) {
+      #pageHero {
+        background-image: url("/assets/images/heroes/shared-hero-1920.jpg");
+        background-image: image-set(url("/assets/images/heroes/shared-hero-1920.avif") type("image/avif"), url("/assets/images/heroes/shared-hero-1920.webp") type("image/webp"), url("/assets/images/heroes/shared-hero-1920.jpg") type("image/jpeg"));
+        background-image: -webkit-image-set(url("/assets/images/heroes/shared-hero-1920.avif") type("image/avif"), url("/assets/images/heroes/shared-hero-1920.webp") type("image/webp"), url("/assets/images/heroes/shared-hero-1920.jpg") type("image/jpeg"));
+      }
+    }
     /* ── Steps ── */
     .steps { display: flex; flex-direction: column; gap: 0; }
     .step {
@@ -131,17 +153,19 @@
 <!-- TICKER -->
 <div class="ticker">
   <div class="ticker__track">
-    <span class="ticker__item"><span class="ticker__label">FDI Morocco</span><span class="ticker__value ticker__value--up">+34% 2023</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">GDP Growth</span><span class="ticker__value ticker__value--up">4.9% · 2025</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">FDI Morocco</span><span class="ticker__value ticker__value--up">56.1bn MAD · 2025</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Agri Land · Souss-Massa</span><span class="ticker__value ticker__value--up">High Demand</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">Tourism Morocco</span><span class="ticker__value ticker__value--up">14.5M visitors</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Tourist Arrivals</span><span class="ticker__value ticker__value--up">19.8M · 2025</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Inflation</span><span class="ticker__value ticker__value--up">0.8% · 2025</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">2030 World Cup</span><span class="ticker__value ticker__value--gold">Co-host</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">Marrakech Real Estate</span><span class="ticker__value ticker__value--up">+18% / year</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Industrial Zone · Tangier</span><span class="ticker__value ticker__value--up">Active Expansion</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">FDI Morocco</span><span class="ticker__value ticker__value--up">+34% 2023</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">GDP Growth</span><span class="ticker__value ticker__value--up">4.9% · 2025</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">FDI Morocco</span><span class="ticker__value ticker__value--up">56.1bn MAD · 2025</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Agri Land · Souss-Massa</span><span class="ticker__value ticker__value--up">High Demand</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">Tourism Morocco</span><span class="ticker__value ticker__value--up">14.5M visitors</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Tourist Arrivals</span><span class="ticker__value ticker__value--up">19.8M · 2025</span></span><span class="ticker__sep">◆</span>
+    <span class="ticker__item"><span class="ticker__label">Inflation</span><span class="ticker__value ticker__value--up">0.8% · 2025</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">2030 World Cup</span><span class="ticker__value ticker__value--gold">Co-host</span></span><span class="ticker__sep">◆</span>
-    <span class="ticker__item"><span class="ticker__label">Marrakech Real Estate</span><span class="ticker__value ticker__value--up">+18% / year</span></span><span class="ticker__sep">◆</span>
     <span class="ticker__item"><span class="ticker__label">Industrial Zone · Tangier</span><span class="ticker__value ticker__value--up">Active Expansion</span></span><span class="ticker__sep">◆</span>
   </div>
 </div>
@@ -187,7 +211,7 @@
 </nav>
 
 <!-- PAGE HERO -->
-<header class="page-hero page-hero--photo" style="background-image:url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1800&amp;q=85')">
+<header class="page-hero page-hero--photo" id="pageHero">
   <div class="container">
     <div class="breadcrumb">
       <a href="/">Home</a>
@@ -322,6 +346,16 @@
   </div>
 </section>
 
+<!-- COVERAGE -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-label reveal">Coverage</div>
+    <h2 class="section-headline reveal">Before the process, the brief.</h2>
+    <p class="section-intro reveal">Nothing on this site is a listing, and that is deliberate. The process begins when you describe what you are trying to acquire; coverage across five regions and five sectors is then read against it. Everything that follows — sourcing, structuring, title, signature — starts from that one message.</p>
+    <button type="button" class="btn btn--primary js-advisor-open">Speak to an advisor</button>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <div class="cta-band">
   <div class="container">
@@ -329,7 +363,6 @@
     <p class="cta-band__sub reveal">5 minutes to establish your profile. Our team reviews every application individually and responds within 48h.</p>
     <div class="cta-band__actions reveal">
       <a href="contact.html" class="btn btn--primary">Submit a Brief</a>
-      <a href="https://wa.me/212661185045?text=Hello%20Xvestora%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20investment%20process." target="_blank" rel="noopener" class="btn btn--ghost">Contact via WhatsApp</a>
     </div>
   </div>
 </div>
@@ -378,7 +411,6 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="contact.html">Submit a Brief</a></li>
-          <li><a href="https://wa.me/212661185045">WhatsApp</a></li>
           <li><a href="mailto:contact@xvestora.com">Email</a></li>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
@@ -395,14 +427,43 @@
   </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/212661185045?text=Hello%20Xvestora%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20process." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg class="wa-float__icon" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L0 24l6.335-1.507A11.933 11.933 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.376l-.36-.213-3.728.887.928-3.618-.234-.373A9.818 9.818 0 1 1 12 21.818z"/>
-  </svg>
-  <span class="wa-float__label">WhatsApp</span>
-</a>
+<!-- ADVISOR FLOATING GATE -->
+<button type="button" class="btn btn--primary advisor-float js-advisor-open" aria-label="Speak to an advisor">Speak to an advisor</button>
+
+<div class="advisor-backdrop" id="advisorBackdrop">
+  <div class="advisor-panel">
+    <button type="button" class="btn btn--ghost advisor-close js-advisor-close" aria-label="Close">Close</button>
+    <div class="section-label reveal">Private Access</div>
+    <h2 class="section-headline reveal">Speak to <em>an Advisor</em></h2>
+    <p class="section-intro reveal">Share a few details and we will prepare your file.</p>
+    <form id="advisorForm" action="https://formspree.io/f/4df1af20-1d44-46f3-80e4-8af031627074" method="POST">
+      <div class="field"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" /></div>
+      <div class="field"><label>Email Address</label><input type="email" name="email" placeholder="Your email address" required /></div>
+      <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="+212 6xx xxx xxx" /></div>
+      <div class="field"><label>City of Interest</label><input type="text" name="city" placeholder="e.g. Tangier" /></div>
+      <div class="field">
+        <label>Sector</label>
+        <select name="sector">
+          <option value="" disabled selected>Select a sector (optional)</option>
+          <option>Real Estate</option><option>Industry</option><option>Agriculture</option><option>Tourism</option><option>Energy</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Budget Range</label>
+        <select name="budget">
+          <option value="" disabled selected>Select a range (optional)</option>
+          <option>&lt; 500K USD</option><option>500K – 1M USD</option><option>1M – 5M USD</option><option>5M USD+</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Submit</button>
+      <p class="section-intro">Your details are used to prepare your file. Nothing is shared with third parties.</p>
+    </form>
+    <div class="card" id="advisorSuccess" hidden data-wa-label="Continue on WhatsApp">
+      <h3 class="section-headline">Thank You</h3>
+      <p class="section-intro">Your details have been received. You may also continue the conversation directly.</p>
+    </div>
+  </div>
+</div>
 
 <script>
   // Nav scroll
@@ -418,6 +479,33 @@
   // Reveal
   const ro = new IntersectionObserver(entries=>{ entries.forEach((e,i)=>{ if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60); ro.unobserve(e.target);} }); },{threshold:.08,rootMargin:'0px 0px -20px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+  const advisorBackdrop=document.getElementById('advisorBackdrop');
+  document.querySelectorAll('.js-advisor-open').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorBackdrop.classList.add('open');}));
+  document.querySelectorAll('.js-advisor-close').forEach(btn=>btn.addEventListener('click',e=>{e.preventDefault();advisorBackdrop.classList.remove('open');}));
+  advisorBackdrop.addEventListener('click',e=>{ if(e.target===advisorBackdrop) advisorBackdrop.classList.remove('open'); });
+  const advisorForm=document.getElementById('advisorForm'),advisorSuccess=document.getElementById('advisorSuccess');
+  if(advisorForm){
+    advisorForm.addEventListener('submit',e=>{
+      e.preventDefault();
+      const abtn=advisorForm.querySelector('button[type="submit"]');
+      abtn.disabled=true;
+      fetch(advisorForm.action,{method:'POST',body:new FormData(advisorForm),headers:{'Accept':'application/json'}})
+        .then(r=>{
+          if(r.ok){
+            advisorForm.hidden=true;
+            advisorSuccess.removeAttribute('hidden');
+            const a=document.createElement('a');
+            a.href='https://wa.me/212661185045';
+            a.target='_blank'; a.rel='noopener';
+            a.className='btn btn--ghost';
+            a.textContent=advisorSuccess.getAttribute('data-wa-label');
+            advisorSuccess.appendChild(a);
+          } else { abtn.disabled=false; }
+        })
+        .catch(()=>{ abtn.disabled=false; });
+    });
+  }
 </script>
 </body>
 </html>
