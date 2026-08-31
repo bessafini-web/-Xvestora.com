@@ -771,6 +771,12 @@ button  { cursor: pointer; font-family: var(--font-body); }
   50%       { opacity: 1;    transform: scaleY(1); }
 }
 
+/* Desktop hero typography — larger H1, left edge matches nav logo */
+@media (min-width: 1024px) {
+  .hero__content { max-width: var(--max-w); width: 100%; }
+  .hero__headline { font-size: calc(var(--text-h1) * 1.28); }
+}
+
 /* ═══════════════════════════════════════
    STATS BAR
 ═══════════════════════════════════════ */
