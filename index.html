@@ -32,6 +32,9 @@
   <!-- Hero image preload for faster LCP -->
   <link rel="preload" as="image" href="assets/images/hero.jpg" />
 
+  <!-- Hero video poster preload (AVIF) -->
+  <link rel="preload" as="image" href="/assets/video/hero-poster-1920.avif" type="image/avif" />
+
   <!-- ─── DNS prefetch pour performance ─── -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
@@ -258,10 +261,11 @@
 
       <div class="hero-video-wrap">
 
-        <video src="/assets/video/hero-mix.mp4"
-               poster="/assets/video/hero-poster.jpg"
-               autoplay muted loop playsinline preload="metadata"
-               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;"></video>
+        <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true"
+               poster="/assets/video/hero-poster-1920.avif"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+          <track kind="captions" src="/assets/video/hero.vtt" srclang="en" label="Captions" default />
+        </video>
 
         <!-- Slide 1: Strategic Land / Terrain -->
         <div class="hero-slide active" data-label="Strategic Land · Morocco">
@@ -919,8 +923,8 @@
             <input type="tel" name="phone" placeholder="+212 6xx xxx xxx" />
           </div>
           <div class="cta__field">
-            <label>Investor Profile</label>
-            <select name="type" required>
+            <label for="access-type">Investor Profile</label>
+            <select id="access-type" name="type" required>
               <option value="" disabled selected>Select your profile</option>
               <option>Real Estate Developer</option>
               <option>Private Investor</option>
@@ -933,8 +937,8 @@
         </div>
         <div class="cta__form-row">
           <div class="cta__field">
-            <label>Investment Ticket</label>
-            <select name="ticket" required>
+            <label for="access-ticket">Investment Ticket</label>
+            <select id="access-ticket" name="ticket" required>
               <option value="" disabled selected>Select a range</option>
               <option>Budget to define</option>
               <option>&lt; 500K USD</option>
@@ -951,8 +955,8 @@
             </select>
           </div>
           <div class="cta__field">
-            <label>Sector of Interest</label>
-            <select name="sector">
+            <label for="access-sector">Sector of Interest</label>
+            <select id="access-sector" name="sector">
               <option value="" disabled selected>Target sector (optional)</option>
               <option>Real Estate</option>
               <option>Industry</option>
@@ -1134,8 +1138,8 @@
         </div>
         <div class="cta__form-row">
           <div class="cta__field">
-            <label>Sector</label>
-            <select name="sector">
+            <label for="advisor-sector">Sector</label>
+            <select id="advisor-sector" name="sector">
               <option value="" disabled selected>Select a sector (optional)</option>
               <option>Real Estate</option>
               <option>Industry</option>
@@ -1145,8 +1149,8 @@
             </select>
           </div>
           <div class="cta__field">
-            <label>Budget Range</label>
-            <select name="budget">
+            <label for="advisor-budget">Budget Range</label>
+            <select id="advisor-budget" name="budget">
               <option value="" disabled selected>Select a range (optional)</option>
               <option>&lt; 500K USD</option>
               <option>500K – 1M USD</option>
@@ -1202,7 +1206,7 @@
       </div>
       <div class="footer__nav">
         <div class="footer__col">
-          <h4>Firm</h4>
+          <h3>Firm</h3>
           <ul>
             <li><a href="processus.html">Process</a></li>
             <li><a href="services.html">Services</a></li>
@@ -1212,7 +1216,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Access</h4>
+          <h3>Access</h3>
           <ul>
             <li><a href="#access">Submit a Brief</a></li>
             <li><a href="#access">Join the Network</a></li>
@@ -1220,7 +1224,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Legal</h4>
+          <h3>Legal</h3>
           <ul>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Use</a></li>

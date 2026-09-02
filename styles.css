@@ -256,7 +256,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
   font-size: 0.62rem;
   font-weight: 400;
   letter-spacing: 0.08em;
-  color: var(--white-45);
+  color: var(--white-65);
 }
 
 .ticker__value {
@@ -812,7 +812,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
   font-weight: 500;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--white-45);
+  color: var(--white-65);
 }
 
 .stats-bar__divider {
@@ -861,7 +861,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
   font-weight: 500;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--white-45);
+  color: var(--white-65);
 }
 
 .key-figures__divider {
@@ -901,7 +901,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--white-45);
+  color: var(--white-65);
 }
 
 .marquee-track .dot {
@@ -1558,13 +1558,13 @@ button  { cursor: pointer; font-family: var(--font-body); }
 
 .footer__desc {
   font-size: var(--text-small);
-  color: var(--white-45);
+  color: var(--white-65);
   line-height: 1.7;
 }
 
 .footer__nav { display: flex; gap: 4rem; }
 
-.footer__col h4 {
+.footer__col h3 {
   font-size: var(--text-label);
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -1577,7 +1577,7 @@ button  { cursor: pointer; font-family: var(--font-body); }
 
 .footer__col a {
   font-size: 0.82rem;
-  color: var(--white-45);
+  color: var(--white-65);
   transition: color var(--dur-fast);
 }
 
@@ -1598,14 +1598,14 @@ button  { cursor: pointer; font-family: var(--font-body); }
 
 .footer__disclaimer {
   font-size: var(--text-caption);
-  color: var(--white-25);
+  color: var(--white-65);
   max-width: 680px;
   line-height: 1.7;
 }
 
 .footer__copy {
   font-size: var(--text-caption);
-  color: var(--white-25);
+  color: var(--white-65);
   white-space: nowrap;
 }
 
