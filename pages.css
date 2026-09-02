@@ -450,9 +450,9 @@ button { cursor: pointer; font-family: var(--font-body); }
   gap: 2rem;
   padding: 1.4rem 0;
 }
-.footer__copy { font-size: .7rem; color: var(--text-30); }
+.footer__copy { font-size: .7rem; color: var(--text-50); }
 .footer__legal { display: flex; gap: 1.5rem; }
-.footer__legal a { font-size: .7rem; color: var(--text-30); transition: color var(--fast); }
+.footer__legal a { font-size: .7rem; color: var(--text-50); transition: color var(--fast); }
 .footer__legal a:hover { color: var(--text-50); }
 
 /* ─── CTA BAND ────────────────────────────────────── */

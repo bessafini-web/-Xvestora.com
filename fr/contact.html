@@ -91,7 +91,7 @@
       text-align: center;
       margin-top: 1rem;
     }
-    .form-note span { color: var(--bronze); }
+    .form-note span { color: var(--bronze-lt); }
     /* Sidebar */
     .sidebar { display: flex; flex-direction: column; gap: 1.2rem; }
     .contact-card {
@@ -105,7 +105,7 @@
       font-weight: 600;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: var(--bronze);
+      color: var(--bronze-lt);
       margin-bottom: .6rem;
     }
     .contact-card__title {
@@ -123,10 +123,10 @@
       font-weight: 500;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--bronze);
+      color: var(--bronze-lt);
       transition: color var(--fast);
     }
-    .contact-card__link:hover { color: var(--bronze-lt); }
+    .contact-card__link:hover { color: var(--text); }
     .trust-items { display: flex; flex-direction: column; gap: .7rem; padding: 1.5rem; background: var(--bronze-pale); border: 1px solid var(--bronze-border); }
     .trust-item { display: flex; align-items: flex-start; gap: .7rem; font-size: .78rem; color: var(--text-70); line-height: 1.5; }
     .trust-item::before { content: '✓'; color: var(--bronze); flex-shrink: 0; font-weight: 500; }
@@ -348,7 +348,7 @@
         </div>
 
         <div style="padding:1.5rem;background:var(--void-card);border:1px solid var(--border);">
-          <p style="font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:.8rem;">Timing moyen</p>
+          <p style="font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze-lt);margin-bottom:.8rem;">Timing moyen</p>
           <div style="display:flex;flex-direction:column;gap:.6rem;">
             <div style="display:flex;justify-content:space-between;font-size:.8rem;">
               <span style="color:var(--text-70);">Réponse à votre brief</span>
@@ -369,7 +369,7 @@
 
     <!-- FAQ RAPIDE -->
     <div class="faq-mini reveal" style="max-width:700px;margin-top:4rem;">
-      <p style="font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);margin-bottom:1.2rem;">Questions fréquentes</p>
+      <p style="font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze-lt);margin-bottom:1.2rem;">Questions fréquentes</p>
       <details>
         <summary>Y a-t-il des frais pour soumettre un brief ?</summary>
         <div class="faq-a">Nos honoraires varient selon le service et la complexité de l'opération. Ils sont convenus entre les parties, dans le cadre du droit marocain et des règles du commerce international, et les modalités sont établies et acceptées avant tout engagement.</div>
@@ -392,10 +392,10 @@
   <div class="container">
     <div class="footer__grid">
       <div><div class="footer__brand-logo"><img src="/assets/images/xvestora_logo_transparent.png" alt="Xvestora" onerror="this.style.display='none'" /></div><p class="footer__tagline">Invest with Vision</p><p class="footer__desc">Cabinet Conseil en Investissement Foncier Privé. Maroc · International.</p></div>
-      <div class="footer__col"><h4>Navigation</h4><ul><li><a href="/fr/">Accueil</a></li><li><a href="processus.html">Processus</a></li><li><a href="secteurs.html">Secteurs</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">À Propos</a></li></ul></div>
-      <div class="footer__col"><h4>Secteurs</h4><ul><li><a href="secteurs.html#immobilier">Immobilier</a></li><li><a href="secteurs.html#industrie">Industrie</a></li><li><a href="secteurs.html#agriculture">Agriculture</a></li><li><a href="secteurs.html#tourisme">Tourisme</a></li><li><a href="secteurs.html#energie">Énergie</a></li></ul></div>
-      <div class="footer__col"><h4>Services</h4><ul><li><a href="services.html#off-market">Hors-Marché</a></li><li><a href="services.html#conseil">Conseil Stratégique</a></li><li><a href="services.html#cle-en-main">Clé en Main</a></li><li><a href="services.html#reseau">Réseau Privé</a></li></ul></div>
-      <div class="footer__col"><h4>Contact</h4><ul><li><a href="contact.html">Soumettre un Brief</a></li><li><a href="mailto:contact@xvestora.com">Email</a></li><li><a href="privacy.html">Confidentialité</a></li></ul></div>
+      <div class="footer__col"><h3>Navigation</h3><ul><li><a href="/fr/">Accueil</a></li><li><a href="processus.html">Processus</a></li><li><a href="secteurs.html">Secteurs</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">À Propos</a></li></ul></div>
+      <div class="footer__col"><h3>Secteurs</h3><ul><li><a href="secteurs.html#immobilier">Immobilier</a></li><li><a href="secteurs.html#industrie">Industrie</a></li><li><a href="secteurs.html#agriculture">Agriculture</a></li><li><a href="secteurs.html#tourisme">Tourisme</a></li><li><a href="secteurs.html#energie">Énergie</a></li></ul></div>
+      <div class="footer__col"><h3>Services</h3><ul><li><a href="services.html#off-market">Hors-Marché</a></li><li><a href="services.html#conseil">Conseil Stratégique</a></li><li><a href="services.html#cle-en-main">Clé en Main</a></li><li><a href="services.html#reseau">Réseau Privé</a></li></ul></div>
+      <div class="footer__col"><h3>Contact</h3><ul><li><a href="contact.html">Soumettre un Brief</a></li><li><a href="mailto:contact@xvestora.com">Email</a></li><li><a href="privacy.html">Confidentialité</a></li></ul></div>
     </div>
     <div class="footer__bottom"><p class="footer__copy">© 2026 Xvestora. All rights reserved.</p><div class="footer__legal"><a href="privacy.html">Politique de Confidentialité</a><a href="terms.html">CGU</a></div></div>
   </div>
@@ -416,15 +416,15 @@
       <div class="field"><label>Téléphone</label><input type="tel" name="phone" placeholder="+212 6xx xxx xxx" /></div>
       <div class="field"><label>Ville d'intérêt</label><input type="text" name="city" placeholder="ex. Tanger" /></div>
       <div class="field">
-        <label>Secteur</label>
-        <select name="sector">
+        <label for="advisor-sector">Secteur</label>
+        <select id="advisor-sector" name="sector">
           <option value="" disabled selected>Sélectionnez un secteur (optionnel)</option>
           <option>Immobilier</option><option>Industrie</option><option>Agriculture</option><option>Tourisme</option><option>Énergie</option>
         </select>
       </div>
       <div class="field">
-        <label>Budget</label>
-        <select name="budget">
+        <label for="advisor-budget">Budget</label>
+        <select id="advisor-budget" name="budget">
           <option value="" disabled selected>Sélectionnez une fourchette (optionnel)</option>
           <option>&lt; 500K USD</option><option>500K – 1M USD</option><option>1M – 5M USD</option><option>5M USD+</option>
         </select>

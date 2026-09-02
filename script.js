@@ -108,6 +108,35 @@ if (burger && mobileMenu) {
 }
 
 
+// ─── HERO VIDEO — deferred load, avoids blocking first paint ──
+(function () {
+  var heroVideo = document.querySelector('.hero-video-wrap > video.hero-video');
+  if (!heroVideo) return;
+
+  function loadHeroVideo() {
+    var src = window.innerWidth < 1024
+      ? '/assets/video/hero-mix-720.mp4'
+      : '/assets/video/hero-mix-1080.mp4';
+    heroVideo.src = src;
+    var playPromise = heroVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(function () {});
+    }
+  }
+
+  function idle(cb) {
+    if (window.requestIdleCallback) window.requestIdleCallback(cb);
+    else setTimeout(cb, 0);
+  }
+
+  if (document.readyState === 'complete') {
+    idle(loadHeroVideo);
+  } else {
+    window.addEventListener('load', function () { idle(loadHeroVideo); });
+  }
+})();
+
+
 // ─── VIDEO SLIDESHOW ─────────────────────
 (function () {
   var slides   = document.querySelectorAll('.hero-slide');

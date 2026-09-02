@@ -32,6 +32,9 @@
   <!-- Hero image preload for faster LCP -->
   <link rel="preload" as="image" href="/assets/images/hero.jpg" />
 
+  <!-- Hero video poster preload (AVIF) -->
+  <link rel="preload" as="image" href="/assets/video/hero-poster-1920.avif" type="image/avif" />
+
   <!-- ─── DNS prefetch pour performance ─── -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
@@ -258,10 +261,11 @@
 
       <div class="hero-video-wrap">
 
-        <video src="/assets/video/hero-mix.mp4"
-               poster="/assets/video/hero-poster.jpg"
-               autoplay muted loop playsinline preload="metadata"
-               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;"></video>
+        <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true"
+               poster="/assets/video/hero-poster-1920.avif"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+          <track kind="captions" src="/assets/video/hero.vtt" srclang="fr" label="Sous-titres" default />
+        </video>
 
         <!-- Slide 1: Strategic Land / Terrain -->
         <div class="hero-slide active" data-label="Terrains Stratégiques · Maroc">
@@ -334,7 +338,7 @@
       <!-- CTAs -->
       <div class="hero__actions reveal">
         <a href="#access" class="btn btn--primary">Soumettre un Brief</a>
-        <button type="button" class="btn btn--ghost js-advisor-open">Book a Call</button>
+        <button type="button" class="btn btn--ghost js-advisor-open">Réserver un Appel</button>
       </div>
 
       <!-- Disclaimer -->
@@ -919,8 +923,8 @@
             <input type="tel" name="phone" placeholder="+212 6xx xxx xxx" />
           </div>
           <div class="cta__field">
-            <label>Profil d'Investisseur</label>
-            <select name="type" required>
+            <label for="access-type">Profil d'Investisseur</label>
+            <select id="access-type" name="type" required>
               <option value="" disabled selected>Sélectionnez votre profil</option>
               <option>Promoteur Immobilier</option>
               <option>Investisseur Privé</option>
@@ -933,8 +937,8 @@
         </div>
         <div class="cta__form-row">
           <div class="cta__field">
-            <label>Ticket d'Investissement</label>
-            <select name="ticket" required>
+            <label for="access-ticket">Ticket d'Investissement</label>
+            <select id="access-ticket" name="ticket" required>
               <option value="" disabled selected>Sélectionnez une fourchette</option>
               <option>Budget à définir</option>
               <option>&lt; 500K USD</option>
@@ -951,8 +955,8 @@
             </select>
           </div>
           <div class="cta__field">
-            <label>Secteur d'Intérêt</label>
-            <select name="sector">
+            <label for="access-sector">Secteur d'Intérêt</label>
+            <select id="access-sector" name="sector">
               <option value="" disabled selected>Secteur visé (optionnel)</option>
               <option>Immobilier</option>
               <option>Industrie</option>
@@ -1134,8 +1138,8 @@
         </div>
         <div class="cta__form-row">
           <div class="cta__field">
-            <label>Secteur</label>
-            <select name="sector">
+            <label for="advisor-sector">Secteur</label>
+            <select id="advisor-sector" name="sector">
               <option value="" disabled selected>Sélectionnez un secteur (optionnel)</option>
               <option>Immobilier</option>
               <option>Industrie</option>
@@ -1145,8 +1149,8 @@
             </select>
           </div>
           <div class="cta__field">
-            <label>Budget</label>
-            <select name="budget">
+            <label for="advisor-budget">Budget</label>
+            <select id="advisor-budget" name="budget">
               <option value="" disabled selected>Sélectionnez une fourchette (optionnel)</option>
               <option>&lt; 500K USD</option>
               <option>500K – 1M USD</option>
@@ -1202,7 +1206,7 @@
       </div>
       <div class="footer__nav">
         <div class="footer__col">
-          <h4>Cabinet</h4>
+          <h3>Cabinet</h3>
           <ul>
             <li><a href="processus.html">Processus</a></li>
             <li><a href="services.html">Services</a></li>
@@ -1212,7 +1216,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Accès</h4>
+          <h3>Accès</h3>
           <ul>
             <li><a href="#access">Soumettre un Brief</a></li>
             <li><a href="#access">Rejoindre le Réseau</a></li>
@@ -1220,7 +1224,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Légal</h4>
+          <h3>Légal</h3>
           <ul>
             <li><a href="#">Politique de Confidentialité</a></li>
             <li><a href="#">Conditions d'Utilisation</a></li>
