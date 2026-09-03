@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true"><g transform="translate(100,100) scale(1.34) translate(-100,-100)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true"><g transform="translate(100,100) scale(1.34) translate(-100,-100)">
   
   
 
   <!-- Sun & Rays -->
-  <circle cx="135" cy="65" r="14" fill="none" stroke="#A87B45" stroke-width="3.25"/>
-  <path d="M 135 44 L 135 38 M 135 86 L 135 92 M 114 65 L 108 65 M 156 65 L 162 65 M 120 50 L 115 45 M 150 80 L 155 85 M 120 80 L 115 85 M 150 50 L 155 45" stroke="#A87B45" stroke-width="2.60"/>
+  <circle cx="135" cy="65" r="14" fill="none" stroke="currentColor" stroke-width="3.25"/>
+  <path d="M 135 44 L 135 38 M 135 86 L 135 92 M 114 65 L 108 65 M 156 65 L 162 65 M 120 50 L 115 45 M 150 80 L 155 85 M 120 80 L 115 85 M 150 50 L 155 45" stroke="currentColor" stroke-width="2.60"/>
 
-  <g stroke="#A87B45" stroke-width="3.25" fill="none">
+  <g stroke="currentColor" stroke-width="3.25" fill="none">
     <!-- Solar Panels -->
     <polygon points="45,115 75,115 68,138 35,138"/>
     <polygon points="78,115 108,115 104,138 71,138"/>
@@ -20,11 +20,11 @@
 
     <!-- Wind Turbine -->
     <line x1="142" y1="145" x2="140" y2="95" stroke-width="3.90"/>
-    <circle cx="140" cy="95" r="3" fill="#A87B45"/>
+    <circle cx="140" cy="95" r="3" fill="currentColor"/>
     <!-- Blades -->
-    <path d="M 140 95 Q 130 75 140 60 Q 143 78 140 95 Z" fill="#A87B45"/>
-    <path d="M 140 95 Q 160 102 172 112 Q 157 110 140 95 Z" fill="#A87B45"/>
-    <path d="M 140 95 Q 125 108 115 122 Q 123 107 140 95 Z" fill="#A87B45"/>
+    <path d="M 140 95 Q 130 75 140 60 Q 143 78 140 95 Z" fill="currentColor"/>
+    <path d="M 140 95 Q 160 102 172 112 Q 157 110 140 95 Z" fill="currentColor"/>
+    <path d="M 140 95 Q 125 108 115 122 Q 123 107 140 95 Z" fill="currentColor"/>
 
     <!-- Ground Horizon -->
     <path d="M 30 145 C 70 142, 130 148, 170 145"/>
