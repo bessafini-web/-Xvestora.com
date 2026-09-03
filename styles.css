@@ -947,8 +947,8 @@ button  { cursor: pointer; font-family: var(--font-body); }
 .sectors__card:hover { background: var(--bg-hover); }
 
 .sectors__icon {
-  width: 36px;
-  height: 36px;
+  width: 56px;
+  height: 56px;
   margin: 0 auto 1.4rem;
   color: var(--gold);
 }

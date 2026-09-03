@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true"><g transform="translate(100,100) scale(1.34) translate(-100,-100)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true"><g transform="translate(100,100) scale(1.34) translate(-100,-100)">
   
   
 
   <!-- Sun -->
-  <circle cx="100" cy="55" r="12" fill="none" stroke="#A87B45" stroke-width="3.25"/>
-  <path d="M 100 37 L 100 33 M 100 73 L 100 77 M 82 55 L 78 55 M 118 55 L 122 55 M 87 42 L 84 39 M 113 68 L 116 71 M 87 68 L 84 71 M 113 42 L 116 39" stroke="#A87B45" stroke-width="2.60"/>
+  <circle cx="100" cy="55" r="12" fill="none" stroke="currentColor" stroke-width="3.25"/>
+  <path d="M 100 37 L 100 33 M 100 73 L 100 77 M 82 55 L 78 55 M 118 55 L 122 55 M 87 42 L 84 39 M 113 68 L 116 71 M 87 68 L 84 71 M 113 42 L 116 39" stroke="currentColor" stroke-width="2.60"/>
 
-  <g stroke="#A87B45" stroke-width="2.60" fill="none">
+  <g stroke="currentColor" stroke-width="2.60" fill="none">
     <!-- Perspective Field Lines -->
     <line x1="100" y1="90" x2="20" y2="145"/>
     <line x1="100" y1="90" x2="60" y2="152"/>

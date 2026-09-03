@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true"><g transform="translate(100,100) scale(1.34) translate(-100,-100)"><!-- Outer Dark Background -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true"><g transform="translate(100,100) scale(1.34) translate(-100,-100)"><!-- Outer Dark Background -->
   
   <!-- Decorative Inner Ring -->
   
   
   
   <!-- Buildings Minimal Vectors -->
-  <g stroke="#A87B45" stroke-width="3.25" fill="none">
+  <g stroke="currentColor" stroke-width="3.25" fill="none">
     <!-- Tall Building -->
     <rect x="65" y="50" width="30" height="90" rx="1"/>
     <line x1="72" y1="62" x2="72" y2="70"/>
