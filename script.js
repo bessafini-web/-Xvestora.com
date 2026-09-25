@@ -115,8 +115,8 @@ if (burger && mobileMenu) {
 
   function loadHeroVideo() {
     var src = window.innerWidth < 1024
-      ? '/assets/video/hero-mix-720.mp4'
-      : '/assets/video/hero-mix-1080.mp4';
+      ? '/assets/video/hero-mix-v3-720.mp4'
+      : '/assets/video/hero-mix-v3.mp4';
     heroVideo.src = src;
     var playPromise = heroVideo.play();
     if (playPromise && typeof playPromise.catch === 'function') {
@@ -138,47 +138,46 @@ if (burger && mobileMenu) {
 
 
 // ─── VIDEO SLIDESHOW ─────────────────────
+// Label driven by video.currentTime (not an independent timer) so the
+// sector label always matches the segment actually on screen, however
+// late the video starts playing relative to page load.
 (function () {
   var slides   = document.querySelectorAll('.hero-slide');
   var labelEl  = document.getElementById('slideLabel');
   var fillEl   = document.getElementById('heroProgress');
-  var current  = 0;
-  var duration = 4500;
-  var startTime;
+  var video    = document.querySelector('.hero-video-wrap > video.hero-video');
+  var segDur   = 1750; // ms per sector segment, matches hero-mix-v3 montage
+  var loopDur  = segDur * slides.length;
+  var current  = -1;
   var raf;
 
   function activateSlide(idx) {
-    // disabled: 4 hero videos replaced by hero-mix.mp4
     slides.forEach(function (s, i) {
-      var vid = s.querySelector('video');
       if (i === idx) {
         s.classList.add('active');
-        // if (vid) { vid.currentTime = 0; vid.play().catch(function () {}); }
         if (labelEl) labelEl.textContent = s.dataset.label || '';
       } else {
         s.classList.remove('active');
-        // if (vid) vid.pause();
       }
     });
   }
 
-  function animateProgress(ts) {
-    if (!startTime) startTime = ts;
-    var pct = Math.min(((ts - startTime) / duration) * 100, 100);
-    if (fillEl) fillEl.style.width = pct + '%';
-    if (pct < 100) {
-      raf = requestAnimationFrame(animateProgress);
-    } else {
-      current = (current + 1) % slides.length;
-      activateSlide(current);
-      startTime = null;
-      raf = requestAnimationFrame(animateProgress);
+  function tick(ts) {
+    var elapsedMs = (video && !video.paused && !isNaN(video.duration))
+      ? (video.currentTime * 1000) % loopDur
+      : ts % loopDur;
+    var idx = Math.min(Math.floor(elapsedMs / segDur), slides.length - 1);
+    if (idx !== current) {
+      current = idx;
+      activateSlide(idx);
     }
+    if (fillEl) fillEl.style.width = ((elapsedMs % segDur) / segDur) * 100 + '%';
+    raf = requestAnimationFrame(tick);
   }
 
   if (slides.length) {
     activateSlide(0);
-    raf = requestAnimationFrame(animateProgress);
+    raf = requestAnimationFrame(tick);
   }
 })();
 

@@ -33,7 +33,7 @@
   <link rel="preload" as="image" href="assets/images/hero.jpg" />
 
   <!-- Hero video poster preload (AVIF) -->
-  <link rel="preload" as="image" href="/assets/video/hero-poster-1920.avif" type="image/avif" />
+  <link rel="preload" as="image" href="/assets/video/hero-poster-v3.avif" type="image/avif" />
 
   <!-- ─── DNS prefetch pour performance ─── -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -262,25 +262,29 @@
       <div class="hero-video-wrap">
 
         <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true"
-               poster="/assets/video/hero-poster-1920.avif"
+               poster="/assets/video/hero-poster-v3.avif"
                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
           <track kind="captions" src="/assets/video/hero.vtt" srclang="en" label="Captions" default />
         </video>
 
-        <!-- Slide 1: Strategic Land / Terrain -->
-        <div class="hero-slide active" data-label="Strategic Land · Morocco">
+        <!-- Slide 1: Real Estate -->
+        <div class="hero-slide active" data-label="Real Estate">
         </div>
 
-        <!-- Slide 2: Industrial Zone / Tanger Med -->
-        <div class="hero-slide" data-label="Industrial Zone · Tanger Med">
+        <!-- Slide 2: Industry -->
+        <div class="hero-slide" data-label="Industry">
         </div>
 
-        <!-- Slide 3: Agricultural Land / Souss-Massa -->
-        <div class="hero-slide" data-label="Agricultural Land · Souss-Massa">
+        <!-- Slide 3: Agriculture -->
+        <div class="hero-slide" data-label="Agriculture">
         </div>
 
-        <!-- Slide 4: Port Infrastructure -->
-        <div class="hero-slide" data-label="Port Infrastructure · Morocco">
+        <!-- Slide 4: Tourism -->
+        <div class="hero-slide" data-label="Tourism">
+        </div>
+
+        <!-- Slide 5: Renewable Energy -->
+        <div class="hero-slide" data-label="Renewable Energy">
         </div>
 
       </div>
@@ -1400,7 +1404,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=2" defer></script>
+  <script src="script.js?v=3" defer></script>
 
   <script>
     const advisorBackdrop = document.getElementById('advisorBackdrop');
