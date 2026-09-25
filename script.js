@@ -108,10 +108,67 @@ if (burger && mobileMenu) {
 }
 
 
-// ─── HERO VIDEO — deferred load, avoids blocking first paint ──
+// ─── HERO VIDEO + SLIDESHOW ──────────────
+// Video: deferred load (avoids blocking first paint), skipped entirely for
+// prefers-reduced-motion or Data Saver users — they get the static poster
+// (first frame of the Real Estate segment) and the page stays on slide 1.
+// Label: driven by video.currentTime (not an independent timer), so the
+// sector label always matches the segment actually on screen, however late
+// the video starts playing relative to page load. If the video never plays
+// (skipped above, or a load error), the label stays on slide 1 too — a
+// label cycling over a still poster would look broken.
 (function () {
   var heroVideo = document.querySelector('.hero-video-wrap > video.hero-video');
-  if (!heroVideo) return;
+  var slides    = document.querySelectorAll('.hero-slide');
+  var labelEl   = document.getElementById('slideLabel');
+  var fillEl    = document.getElementById('heroProgress');
+  var segDur    = 1750; // ms per sector segment, matches hero-mix-v3 montage
+  var loopDur   = segDur * slides.length;
+  var current   = -1;
+  var raf;
+
+  function activateSlide(idx) {
+    slides.forEach(function (s, i) {
+      if (i === idx) {
+        s.classList.add('active');
+        if (labelEl) labelEl.textContent = s.dataset.label || '';
+      } else {
+        s.classList.remove('active');
+      }
+    });
+  }
+
+  function stopSlideshow() {
+    if (raf) cancelAnimationFrame(raf);
+    current = 0;
+    activateSlide(0); // static, matches the poster (Real Estate)
+  }
+
+  function tick(ts) {
+    var elapsedMs = (heroVideo && !heroVideo.paused && !isNaN(heroVideo.duration))
+      ? (heroVideo.currentTime * 1000) % loopDur
+      : ts % loopDur; // brief window before playback actually starts
+    var idx = Math.min(Math.floor(elapsedMs / segDur), slides.length - 1);
+    if (idx !== current) {
+      current = idx;
+      activateSlide(idx);
+    }
+    if (fillEl) fillEl.style.width = ((elapsedMs % segDur) / segDur) * 100 + '%';
+    raf = requestAnimationFrame(tick);
+  }
+
+  if (!slides.length) return;
+  activateSlide(0);
+
+  if (!heroVideo) return; // no video in the DOM: stay on slide 1, no rotation
+
+  var reducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var saveData = navigator.connection && navigator.connection.saveData === true;
+
+  if (reducedMotion || saveData) return; // poster only, slide 1, no rotation
+
+  heroVideo.addEventListener('error', stopSlideshow);
 
   function loadHeroVideo() {
     var src = window.innerWidth < 1024
@@ -134,51 +191,8 @@ if (burger && mobileMenu) {
   } else {
     window.addEventListener('load', function () { idle(loadHeroVideo); });
   }
-})();
 
-
-// ─── VIDEO SLIDESHOW ─────────────────────
-// Label driven by video.currentTime (not an independent timer) so the
-// sector label always matches the segment actually on screen, however
-// late the video starts playing relative to page load.
-(function () {
-  var slides   = document.querySelectorAll('.hero-slide');
-  var labelEl  = document.getElementById('slideLabel');
-  var fillEl   = document.getElementById('heroProgress');
-  var video    = document.querySelector('.hero-video-wrap > video.hero-video');
-  var segDur   = 1750; // ms per sector segment, matches hero-mix-v3 montage
-  var loopDur  = segDur * slides.length;
-  var current  = -1;
-  var raf;
-
-  function activateSlide(idx) {
-    slides.forEach(function (s, i) {
-      if (i === idx) {
-        s.classList.add('active');
-        if (labelEl) labelEl.textContent = s.dataset.label || '';
-      } else {
-        s.classList.remove('active');
-      }
-    });
-  }
-
-  function tick(ts) {
-    var elapsedMs = (video && !video.paused && !isNaN(video.duration))
-      ? (video.currentTime * 1000) % loopDur
-      : ts % loopDur;
-    var idx = Math.min(Math.floor(elapsedMs / segDur), slides.length - 1);
-    if (idx !== current) {
-      current = idx;
-      activateSlide(idx);
-    }
-    if (fillEl) fillEl.style.width = ((elapsedMs % segDur) / segDur) * 100 + '%';
-    raf = requestAnimationFrame(tick);
-  }
-
-  if (slides.length) {
-    activateSlide(0);
-    raf = requestAnimationFrame(tick);
-  }
+  raf = requestAnimationFrame(tick);
 })();
 
 
