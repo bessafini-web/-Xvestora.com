@@ -137,6 +137,25 @@ button  { cursor: pointer; font-family: var(--font-body); }
   color: var(--gold-light);
 }
 
+/* Title-as-link: sections whose full content lives on another page */
+.section-headline a,
+.cta__headline a {
+  color: inherit;
+  text-decoration: none;
+}
+.section-headline a:hover,
+.cta__headline a:hover,
+.section-headline a:focus-visible,
+.cta__headline a:focus-visible {
+  color: var(--gold-light);
+}
+.section-headline a:focus-visible,
+.cta__headline a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 .section-intro {
   font-size: 1rem;
   color: var(--white-65);
@@ -2017,6 +2036,17 @@ button  { cursor: pointer; font-family: var(--font-body); }
 
 .faq__item[open] .faq__q { color: var(--gold); }
 .faq__item[open] .faq__q::after { transform: rotate(45deg); }
+
+/* FAQ item that links out to another page instead of expanding in place */
+.faq__q--link { text-decoration: none; }
+.faq__q--link::after { content: '\2192'; }
+.faq__q--link:hover,
+.faq__q--link:focus-visible { color: var(--gold); }
+.faq__q--link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 
 .faq__a {
   padding: 0 0 1.4rem;

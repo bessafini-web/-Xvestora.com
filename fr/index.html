@@ -47,7 +47,7 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
 
   <link rel="icon" type="image/png" href="/assets/images/xvestora_logo_transparent.png" />
-  <link rel="stylesheet" href="/styles.css?v=2" />
+  <link rel="stylesheet" href="/styles.css?v=3" />
 
   <!-- ─── Schema Markup JSON-LD ─── -->
   <script type="application/ld+json">
@@ -227,7 +227,7 @@
           <a class="nav__lang-btn" href="/">EN</a>
         </div>
         <!-- CTA -->
-        <a href="#access" class="nav__cta">Soumettre un Brief</a>
+        <a href="contact.html" class="nav__cta">Soumettre un Brief</a>
       </div>
 
       <!-- Burger -->
@@ -243,7 +243,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="secteurs.html">Secteurs</a></li>
         <li><a href="about.html">À propos</a></li>
-        <li><a href="#access" class="nav__mobile-cta">Soumettre un Brief</a></li>
+        <li><a href="contact.html" class="nav__mobile-cta">Soumettre un Brief</a></li>
       </ul>
       <div class="nav__mobile-lang">
         <a class="nav__lang-btn active" href="/fr/">FR</a>
@@ -341,7 +341,7 @@
 
       <!-- CTAs -->
       <div class="hero__actions reveal">
-        <a href="#access" class="btn btn--primary">Soumettre un Brief</a>
+        <a href="contact.html" class="btn btn--primary">Soumettre un Brief</a>
         <button type="button" class="btn btn--ghost js-advisor-open">Réserver un Appel</button>
       </div>
 
@@ -456,6 +456,17 @@
     </div>
   </div>
 
+
+  <!-- ═══════════════════════════════════════
+       SECTORS (title only — full content on secteurs.html)
+  ═══════════════════════════════════════ -->
+  <section class="sectors" id="secteurs">
+    <div class="container">
+      <h2 class="section-headline reveal">
+        <a href="secteurs.html">Cinq Secteurs.<br /><em>Une Vision Stratégique.</em></a>
+      </h2>
+    </div>
+  </section>
 
   <!-- ═══════════════════════════════════════
        LEGAL & ADMINISTRATIVE ACCESS
@@ -677,6 +688,17 @@
 
 
   <!-- ═══════════════════════════════════════
+       SERVICES (title only — full content on services.html)
+  ═══════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-headline reveal">
+        <a href="services.html">Un Cabinet. Quatre<br /><em>Axes d'Intervention.</em></a>
+      </h2>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
        COVERAGE (replaces Case Studies + Current Opportunities)
   ═══════════════════════════════════════ -->
   <section class="value" id="coverage">
@@ -710,7 +732,7 @@
               Intégrer le Réseau Privé
             </h3>
             <p>
-              Soumettez un brief d'investissement pour établir votre profil. Chaque candidature est examinée individuellement. Ce réseau est sélectif — les membres admis accèdent immédiatement à notre pipeline d'opportunités actif.
+              Soumettez un brief d'investissement pour établir votre profil.
             </p>
           </div>
         </div>
@@ -742,99 +764,24 @@
 
 
   <!-- ═══════════════════════════════════════
+       TRUST & AUTHORITY (title only — full content on about.html)
+  ═══════════════════════════════════════ -->
+  <section class="trust" id="standards">
+    <div class="container">
+      <h2 class="section-headline reveal">
+        <a href="about.html">Fondés sur la Discrétion.<br /><em>Portés par l'Exigence.</em></a>
+      </h2>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
        CTA / BRIEF FORM
   ═══════════════════════════════════════ -->
   <section class="cta" id="access">
-    <div class="cta__bg"></div>
     <div class="container cta__inner">
-      <div class="section-label reveal" style="color: var(--gold-light);">Accès Privé</div>
       <h2 class="cta__headline reveal">
-        Accéder aux<br /><em>Opportunités Exclusives</em>
+        <a href="contact.html">Accéder aux<br /><em>Opportunités Exclusives</em></a>
       </h2>
-      <p class="cta__sub reveal">
-        Nos dossiers complets sont transmis sur demande qualifiée uniquement.
-      </p>
-
-      <form class="cta__form reveal" id="accessForm"
-            action="https://formspree.io/f/4df1af20-1d44-46f3-80e4-8af031627074"
-            method="POST">
-        <div class="cta__form-row">
-          <div class="cta__field">
-            <label>Nom complet</label>
-            <input type="text" name="name" placeholder="Votre nom complet" required />
-          </div>
-          <div class="cta__field">
-            <label>Adresse e-mail</label>
-            <input type="email" name="email" placeholder="Votre adresse e-mail" required />
-          </div>
-        </div>
-        <div class="cta__form-row">
-          <div class="cta__field">
-            <label>Téléphone (optionnel)</label>
-            <input type="tel" name="phone" placeholder="+212 6xx xxx xxx" />
-          </div>
-          <div class="cta__field">
-            <label for="access-type">Profil d'Investisseur</label>
-            <select id="access-type" name="type" required>
-              <option value="" disabled selected>Sélectionnez votre profil</option>
-              <option>Promoteur Immobilier</option>
-              <option>Investisseur Privé</option>
-              <option>Family Office</option>
-              <option>Fonds d'Investissement</option>
-              <option>HNWI / UHNWI</option>
-              <option>Foncier-Foncier (Land Banker)</option>
-            </select>
-          </div>
-        </div>
-        <div class="cta__form-row">
-          <div class="cta__field">
-            <label for="access-ticket">Ticket d'Investissement</label>
-            <select id="access-ticket" name="ticket" required>
-              <option value="" disabled selected>Sélectionnez une fourchette</option>
-              <option>Budget à définir</option>
-              <option>&lt; 500K USD</option>
-              <option>500K – 1M USD</option>
-              <option>1M – 5M USD</option>
-              <option>5M USD+</option>
-              <option>2M – 5M MAD</option>
-              <option>5M – 15M MAD</option>
-              <option>15M – 50M MAD</option>
-              <option>50M MAD+</option>
-              <option>€500k – €2M</option>
-              <option>€2M – €10M</option>
-              <option>€10M+</option>
-            </select>
-          </div>
-          <div class="cta__field">
-            <label for="access-sector">Secteur d'Intérêt</label>
-            <select id="access-sector" name="sector">
-              <option value="" disabled selected>Secteur visé (optionnel)</option>
-              <option>Immobilier</option>
-              <option>Industrie</option>
-              <option>Agriculture</option>
-              <option>Tourisme</option>
-              <option>Énergie</option>
-              <option>Tous secteurs</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">Soumettre mon Brief d'Investissement</button>
-        <p class="cta__form-note">
-          Toutes les candidatures sont examinées sous 48h. Confidentialité stricte garantie.
-        </p>
-      </form>
-
-      <div class="cta__form-success" id="formSuccess">
-        <div class="cta__success-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <h3>
-          Brief Reçu
-        </h3>
-        <p>
-          Merci. Votre candidature est en cours d'examen. Nous vous contacterons dans les 48h à l'adresse e-mail fournie.
-        </p>
-      </div>
     </div>
   </section>
 
@@ -871,12 +818,13 @@
           </div>
         </details>
 
-        <details class="faq__item">
-          <summary class="faq__q">Xvestora travaille-t-il avec des investisseurs non-résidents au Maroc ?</summary>
-          <div class="faq__a">
-            <p>Oui. La majorité de notre clientèle est basée hors du Maroc — Golfe, Europe, Afrique subsaharienne. Nous maîtrisons les contraintes réglementaires liées aux non-résidents (rapatriement de capitaux, code des investissements, obligations notariales) et coordonnons avec des conseils juridiques locaux au besoin.</p>
-          </div>
-        </details>
+        <div class="faq__item">
+          <a class="faq__q faq__q--link" href="contact.html">Xvestora travaille-t-il avec des investisseurs non-résidents au Maroc ?</a>
+        </div>
+
+        <div class="faq__item">
+          <a class="faq__q faq__q--link" href="about.html">Comment Xvestora est-il rémunéré ?</a>
+        </div>
 
       </div>
     </div>
@@ -910,14 +858,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Sur la base de nos transactions récentes : entre 4 et 8 mois du brief initial à la signature notariée."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Xvestora travaille-t-il avec des investisseurs non-résidents au Maroc ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. La majorité de notre clientèle est basée hors du Maroc — Golfe, Europe, Afrique subsaharienne. Nous maîtrisons les contraintes réglementaires non-résidents."
         }
       }
     ]
@@ -1054,8 +994,8 @@
         <div class="footer__col">
           <h3>Accès</h3>
           <ul>
-            <li><a href="#access">Soumettre un Brief</a></li>
-            <li><a href="#access">Rejoindre le Réseau</a></li>
+            <li><a href="contact.html">Soumettre un Brief</a></li>
+            <li><a href="contact.html">Rejoindre le Réseau</a></li>
             <li><a href="#advisory">Prendre RDV</a></li>
           </ul>
         </div>
@@ -1116,7 +1056,7 @@
        STICKY MOBILE CTA
   ═══════════════════════════════════════ -->
   <div class="mobile-cta" id="mobileCta" aria-hidden="true">
-    <a href="#access" class="mobile-cta__btn">Soumettre un Brief</a>
+    <a href="contact.html" class="mobile-cta__btn">Soumettre un Brief</a>
   </div>
 
 </body>

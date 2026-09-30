@@ -47,7 +47,7 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
 
   <link rel="icon" type="image/png" href="assets/images/xvestora_logo_transparent.png" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 
   <!-- ─── Schema Markup JSON-LD ─── -->
   <script type="application/ld+json">
@@ -227,7 +227,7 @@
           <a class="nav__lang-btn active" href="/">EN</a>
         </div>
         <!-- CTA -->
-        <a href="#access" class="nav__cta">Request Access</a>
+        <a href="contact.html" class="nav__cta">Request Access</a>
       </div>
 
       <!-- Burger -->
@@ -243,7 +243,7 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="secteurs.html">Sectors</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#access" class="nav__mobile-cta">Request Access</a></li>
+        <li><a href="contact.html" class="nav__mobile-cta">Request Access</a></li>
       </ul>
       <div class="nav__mobile-lang">
         <a class="nav__lang-btn" href="/fr/">FR</a>
@@ -341,7 +341,7 @@
 
       <!-- CTAs -->
       <div class="hero__actions reveal">
-        <a href="#access" class="btn btn--primary">Submit a Brief</a>
+        <a href="contact.html" class="btn btn--primary">Submit a Brief</a>
         <button type="button" class="btn btn--ghost js-advisor-open">Book a Call</button>
       </div>
 
@@ -456,6 +456,17 @@
     </div>
   </div>
 
+
+  <!-- ═══════════════════════════════════════
+       SECTORS (title only — full content on secteurs.html)
+  ═══════════════════════════════════════ -->
+  <section class="sectors" id="secteurs">
+    <div class="container">
+      <h2 class="section-headline reveal">
+        <a href="secteurs.html">Five Sectors.<br /><em>One Strategic Vision.</em></a>
+      </h2>
+    </div>
+  </section>
 
   <!-- ═══════════════════════════════════════
        LEGAL & ADMINISTRATIVE ACCESS
@@ -677,6 +688,17 @@
 
 
   <!-- ═══════════════════════════════════════
+       SERVICES (title only — full content on services.html)
+  ═══════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-headline reveal">
+        <a href="services.html">One Advisory Firm.<br /><em>Four Service Lines.</em></a>
+      </h2>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
        COVERAGE (replaces Case Studies + Current Opportunities)
   ═══════════════════════════════════════ -->
   <section class="value" id="coverage">
@@ -710,7 +732,7 @@
               Join the Private Network
             </h3>
             <p>
-              Submit an investment brief to establish your profile. Every application is reviewed individually. This network is selective — admitted members gain immediate access to our active opportunity pipeline.
+              Submit an investment brief to establish your profile.
             </p>
           </div>
         </div>
@@ -742,99 +764,24 @@
 
 
   <!-- ═══════════════════════════════════════
+       TRUST & AUTHORITY (title only — full content on about.html)
+  ═══════════════════════════════════════ -->
+  <section class="trust" id="standards">
+    <div class="container">
+      <h2 class="section-headline reveal">
+        <a href="about.html">Built on Discretion.<br /><em>Driven by Standards.</em></a>
+      </h2>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
        CTA / BRIEF FORM
   ═══════════════════════════════════════ -->
   <section class="cta" id="access">
-    <div class="cta__bg"></div>
     <div class="container cta__inner">
-      <div class="section-label reveal" style="color: var(--gold-light);">Private Access</div>
       <h2 class="cta__headline reveal">
-        Access<br /><em>Exclusive Opportunities</em>
+        <a href="contact.html">Access<br /><em>Exclusive Opportunities</em></a>
       </h2>
-      <p class="cta__sub reveal">
-        Our complete files are shared upon qualified request only.
-      </p>
-
-      <form class="cta__form reveal" id="accessForm"
-            action="https://formspree.io/f/4df1af20-1d44-46f3-80e4-8af031627074"
-            method="POST">
-        <div class="cta__form-row">
-          <div class="cta__field">
-            <label>Full Name</label>
-            <input type="text" name="name" placeholder="Votre nom complet" required />
-          </div>
-          <div class="cta__field">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="Votre adresse e-mail" required />
-          </div>
-        </div>
-        <div class="cta__form-row">
-          <div class="cta__field">
-            <label>Phone (optional)</label>
-            <input type="tel" name="phone" placeholder="+212 6xx xxx xxx" />
-          </div>
-          <div class="cta__field">
-            <label for="access-type">Investor Profile</label>
-            <select id="access-type" name="type" required>
-              <option value="" disabled selected>Select your profile</option>
-              <option>Real Estate Developer</option>
-              <option>Private Investor</option>
-              <option>Family Office</option>
-              <option>Investment Fund</option>
-              <option>HNWI / UHNWI</option>
-              <option>Land Banker</option>
-            </select>
-          </div>
-        </div>
-        <div class="cta__form-row">
-          <div class="cta__field">
-            <label for="access-ticket">Investment Ticket</label>
-            <select id="access-ticket" name="ticket" required>
-              <option value="" disabled selected>Select a range</option>
-              <option>Budget to define</option>
-              <option>&lt; 500K USD</option>
-              <option>500K – 1M USD</option>
-              <option>1M – 5M USD</option>
-              <option>5M USD+</option>
-              <option>2M – 5M MAD</option>
-              <option>5M – 15M MAD</option>
-              <option>15M – 50M MAD</option>
-              <option>50M MAD+</option>
-              <option>€500k – €2M</option>
-              <option>€2M – €10M</option>
-              <option>€10M+</option>
-            </select>
-          </div>
-          <div class="cta__field">
-            <label for="access-sector">Sector of Interest</label>
-            <select id="access-sector" name="sector">
-              <option value="" disabled selected>Target sector (optional)</option>
-              <option>Real Estate</option>
-              <option>Industry</option>
-              <option>Agriculture</option>
-              <option>Tourism</option>
-              <option>Energy</option>
-              <option>All sectors</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full">Submit My Investment Brief</button>
-        <p class="cta__form-note">
-          All applications reviewed within 48h. Strict confidentiality guaranteed.
-        </p>
-      </form>
-
-      <div class="cta__form-success" id="formSuccess">
-        <div class="cta__success-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <h3>
-          Brief Received
-        </h3>
-        <p>
-          Thank you. Your application is under review. We will be in touch within 48h at the email address provided.
-        </p>
-      </div>
     </div>
   </section>
 
@@ -871,12 +818,13 @@
           </div>
         </details>
 
-        <details class="faq__item">
-          <summary class="faq__q">Does Xvestora work with non-resident investors in Morocco?</summary>
-          <div class="faq__a">
-            <p>Yes. The majority of our clients are based outside Morocco — Gulf, Europe, Sub-Saharan Africa. We are well-versed in non-resident regulatory requirements (capital repatriation, investment code, notarial obligations) and coordinate with local legal counsel as needed.</p>
-          </div>
-        </details>
+        <div class="faq__item">
+          <a class="faq__q faq__q--link" href="contact.html">Does Xvestora work with non-resident investors in Morocco?</a>
+        </div>
+
+        <div class="faq__item">
+          <a class="faq__q faq__q--link" href="about.html">How is Xvestora compensated?</a>
+        </div>
 
       </div>
     </div>
@@ -910,14 +858,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Based on our recent transactions: between 4 and 8 months from the initial brief to the notarised signing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does Xvestora work with non-resident investors in Morocco?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The majority of our clients are based outside Morocco — the Gulf, Europe, Sub-Saharan Africa. We are well versed in the regulatory constraints for non-residents."
         }
       }
     ]
@@ -1054,8 +994,8 @@
         <div class="footer__col">
           <h3>Access</h3>
           <ul>
-            <li><a href="#access">Submit a Brief</a></li>
-            <li><a href="#access">Join the Network</a></li>
+            <li><a href="contact.html">Submit a Brief</a></li>
+            <li><a href="contact.html">Join the Network</a></li>
             <li><a href="#advisory">Book a Call</a></li>
           </ul>
         </div>
@@ -1116,7 +1056,7 @@
        STICKY MOBILE CTA
   ═══════════════════════════════════════ -->
   <div class="mobile-cta" id="mobileCta" aria-hidden="true">
-    <a href="#access" class="mobile-cta__btn">Submit a Brief</a>
+    <a href="contact.html" class="mobile-cta__btn">Submit a Brief</a>
   </div>
 
 </body>
