@@ -588,8 +588,6 @@ button  { cursor: pointer; font-family: var(--font-body); }
 .hero__bg {
   position: absolute;
   inset: 0;
-  /* Primary: Morocco landscape photo */
-  background-image: url('assets/images/hero.jpg');
   background-size: cover;
   background-position: center 35%;
   background-repeat: no-repeat;
@@ -601,7 +599,6 @@ button  { cursor: pointer; font-family: var(--font-body); }
 @media (max-width: 768px) {
   .hero__bg {
     background-position: 60% center;
-    background-image: url('assets/images/hero.jpg');
   }
 }
 

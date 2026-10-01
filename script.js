@@ -126,6 +126,7 @@ if (burger && mobileMenu) {
   var loopDur   = segDur * slides.length;
   var current   = -1;
   var raf;
+  var videoStarted = false; // true only once the video is actually rendering frames
 
   function activateSlide(idx) {
     slides.forEach(function (s, i) {
@@ -145,9 +146,15 @@ if (burger && mobileMenu) {
   }
 
   function tick(ts) {
-    var elapsedMs = (heroVideo && !heroVideo.paused && !isNaN(heroVideo.duration))
-      ? (heroVideo.currentTime * 1000) % loopDur
-      : ts % loopDur; // brief window before playback actually starts
+    if (!videoStarted) {
+      if (heroVideo && !heroVideo.paused && heroVideo.currentTime > 0) {
+        videoStarted = true;
+      } else {
+        raf = requestAnimationFrame(tick);
+        return; // stay on slide 1, no rotation, until the video is truly playing
+      }
+    }
+    var elapsedMs = (heroVideo.currentTime * 1000) % loopDur;
     var idx = Math.min(Math.floor(elapsedMs / segDur), slides.length - 1);
     if (idx !== current) {
       current = idx;
