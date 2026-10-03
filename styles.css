@@ -60,6 +60,12 @@
   --dur-slow:    760ms;
 }
 
+/* Chinese build: system CJK stack, no webfont requested */
+html[lang="zh-Hans"] {
+  --font-display: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-body:    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
 /* ─────────────────────────────────────────
    RESET
 ───────────────────────────────────────── */

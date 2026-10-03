@@ -4,145 +4,241 @@
 
   <url>
     <loc>https://xvestora.com/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/" />
   </url>
 
   <url>
     <loc>https://xvestora.com/fr/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/zh/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/" />
   </url>
 
   <url>
     <loc>https://xvestora.com/services.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/services.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/services.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/services.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/services.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/fr/services.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/services.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/services.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/services.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/services.html" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/zh/services.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/services.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/services.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/services.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/services.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/processus.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/processus.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/processus.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/processus.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/processus.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/fr/processus.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/processus.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/processus.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/processus.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/processus.html" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/zh/processus.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/processus.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/processus.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/processus.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/processus.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/secteurs.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/secteurs.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/secteurs.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/secteurs.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/secteurs.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/fr/secteurs.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/secteurs.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/secteurs.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/secteurs.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/secteurs.html" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/zh/secteurs.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/secteurs.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/secteurs.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/secteurs.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/secteurs.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/about.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/about.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/about.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/about.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/fr/about.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/about.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/about.html" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/zh/about.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/about.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/about.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/contact.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/contact.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/contact.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/fr/contact.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/contact.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/contact.html" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/zh/contact.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/contact.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/privacy.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>yearly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/privacy.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/privacy.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/privacy.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/fr/privacy.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>yearly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/privacy.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/privacy.html" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/zh/privacy.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/privacy.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/privacy.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/terms.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>yearly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/terms.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/terms.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/terms.html" />
   </url>
 
   <url>
     <loc>https://xvestora.com/fr/terms.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>yearly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/terms.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/terms.html" />
+  </url>
+
+  <url>
+    <loc>https://xvestora.com/zh/terms.html</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xvestora.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://xvestora.com/fr/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://xvestora.com/zh/terms.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xvestora.com/terms.html" />
   </url>
 
